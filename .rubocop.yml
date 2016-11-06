@@ -1,2 +1,4 @@
-Style/FileName:
+require: rubocop-rspec
+
+Style/SignalException:
   Enabled: false
