@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'nokogiri'
+require 'oga'
 require 'egp_rates/bank'
 require 'egp_rates/bank/cbe'
 
