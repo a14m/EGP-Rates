@@ -4,6 +4,8 @@ require 'EGP_Rates'
 require 'pry'
 require 'webmock/rspec'
 require 'vcr'
+require 'simplecov'
+SimpleCov.start
 
 WebMock.disable_net_connect!
 
