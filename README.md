@@ -24,8 +24,7 @@ TODO: Write usage instructions here
 
 ## Development
 - clone the repo
-- to install dependencies locally `bundle install` (everything installed inside `.bundle` folder)
-
+- to install dependencies run `bundle install`
 - to run the test suite `bundle exec rake spec`
 - to run rubocop linter `bundle exec rake rubocop`
 
