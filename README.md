@@ -1,41 +1,56 @@
 # EGPRates
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/EGP_Rates`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+[![wercker status](https://app.wercker.com/status/d6ca4529f0d563e82898ace1f2b3de25/s/master "wercker status")](https://app.wercker.com/project/byKey/d6ca4529f0d563e82898ace1f2b3de25)
+[![Code Climate](https://codeclimate.com/github/mad-raz/EGP-Rates/badges/gpa.svg)](https://codeclimate.com/github/mad-raz/EGP-Rates)
+[![Test Coverage](https://codeclimate.com/github/mad-raz/EGP-Rates/badges/coverage.svg)](https://codeclimate.com/github/mad-raz/EGP-Rates/coverage)
 
 ## Installation
 
 Add this line to your application's Gemfile:
-
 ```ruby
 gem 'EGP_Rates'
 ```
-
 And then execute:
-
-    $ bundle
-
+```sh
+$ bundle
+```
 Or install it yourself as:
-
-    $ gem install EGP_Rates
+```sh
+$ gem install EGP_Rates
+```
 
 ## Usage
 
 TODO: Write usage instructions here
 
 ## Development
+- clone the repo
+- to install dependencies locally `bundle install` (everything installed inside `.bundle` folder)
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- to run the test suite `bundle exec rake spec`
+- to run rubocop linter `bundle exec rake rubocop`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[mad-raz]/EGP_Rates. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/mad-raz/EGP_Rates
 
+This project is intended to be a safe,
+welcoming space for collaboration,
+and contributors are expected to adhere to the
+Contributor Covenant [code of conduct.](/CODE_OF_CONDUCT.md)
+
+- Read the previous [code of conduct](/CODE_OF_CONDUCT.md) once again.
+- Write clean code.
+- Write clean tests.
+- Make sure your code is covered by test.
+- Make sure you follow the code style mentioned by
+[rubocop](http://batsov.com/rubocop/) (run `bundle exec rake rubocop`)
+- A pre-commit hook included with repo can be used to remember rubocop
+it won't disable commits, but will remind you of violations.
+you can set it up using `chmod +x pre-commit && cp pre-commit .git/hooks/`
+- Be nice to your fellow human-beings/bots contributing to this repo.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+The project is available as open source under the terms of the
+[MIT License](/LICENSE.md)
