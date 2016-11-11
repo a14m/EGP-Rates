@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'EGP_Rates'
 require 'pry'
 require 'webmock/rspec'
 require 'vcr'
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
+require 'egp_rates'
 
 WebMock.disable_net_connect!
 
