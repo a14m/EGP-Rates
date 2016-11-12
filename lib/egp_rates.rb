@@ -3,6 +3,7 @@
 require 'oga'
 require 'egp_rates/bank'
 require 'egp_rates/cbe'
+require 'egp_rates/nbe'
 
 # Base Module
 module EGPRates
