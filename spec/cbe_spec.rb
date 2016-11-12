@@ -25,13 +25,13 @@ describe EGPRates::CBE do
     it 'raises ResponseError unless Net::HTTPSuccess', :no_vcr do
       stub_request(:get, /.*cbe.*/).to_return(body: '', status: 500)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
-        EGPRates::Bank::ResponseError, '500'
+        EGPRates::ResponseError, '500'
     end
 
     it 'raises ResponseError if HTML structure changed', :no_vcr do
       stub_request(:get, /.*cbe.*/).to_return(body: '', status: 200)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
-        EGPRates::Bank::ResponseError, 'Unknown HTML'
+        EGPRates::ResponseError, 'Unknown HTML'
     end
 
     it 'returns <#Enumerator::Lazy> of 9 rows', vcr: { cassette_name: :CBE } do
@@ -51,7 +51,7 @@ describe EGPRates::CBE do
 
     it 'raises ResponseError when Unknown Currency' do
       expect { bank.send(:currency_symbol, 'Egyptian pound') }.to raise_error\
-        EGPRates::Bank::ResponseError, 'Unknown currency Egyptian pound'
+        EGPRates::ResponseError, 'Unknown currency Egyptian pound'
     end
   end
 

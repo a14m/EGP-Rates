@@ -2,11 +2,6 @@
 # Class Representing the bank to get the data from
 module EGPRates
   class Bank
-    # Class Idicating HTTPResponseErrors when unexpected behaviour encountered
-    # while scraping the [Bank] data
-    class ResponseError < StandardError
-    end
-
     attr_reader :sym
 
     # Abstract method
