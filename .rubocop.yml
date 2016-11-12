@@ -1,4 +1,16 @@
 require: rubocop-rspec
 
+Metrics/AbcSize:
+  Max: 20
+
 Style/SignalException:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/SubjectStub:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
