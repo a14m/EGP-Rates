@@ -42,7 +42,8 @@ describe EGPRates::CBE do
   end
 
   describe '#currency_symbol' do
-    %w(US Euro Pound Swiss Japanese Saudi Kuwait UAE Chinese).each do |currency|
+    %w(US Euro Sterling Swiss Japanese Saudi Kuwait UAE Chinese)\
+      .each do |currency|
       it "returns currency :SYM for #{currency}" do
         symbols = %i(USD EUR GBP CHF JPY SAR KWD AED CNY)
         expect(symbols).to include(bank.send(:currency_symbol, currency))

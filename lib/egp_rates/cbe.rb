@@ -43,7 +43,7 @@ module EGPRates
       case currency
       when /US/        then :USD
       when /Euro/      then :EUR
-      when /Pound/     then :GBP
+      when /Sterling/  then :GBP
       when /Swiss/     then :CHF
       when /Japanese/  then :JPY
       when /Saudi/     then :SAR
