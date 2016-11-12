@@ -4,6 +4,8 @@ describe EGPRates::NBE do
 
   it 'Live Testing', :live do
     expect(bank.exchange_rates).to include(:buy, :sell)
+    expect(bank.exchange_rates[:buy].size).to eq 17
+    expect(bank.exchange_rates[:sell].size).to eq 17
   end
 
   describe '.new' do
