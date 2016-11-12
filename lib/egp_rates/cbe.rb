@@ -39,7 +39,6 @@ module EGPRates
     # @param currency [String] "US Dollar"
     # @return [Symbol] :USD ISO currency name
     # rubocop:disable Metrics/CyclomaticComplexity
-    # rubocop:disable Metrics/MethodLength
     def currency_symbol(currency)
       case currency
       when /US/        then :USD
@@ -55,7 +54,6 @@ module EGPRates
       end
     end
     # rubocop:enable Metrics/CyclomaticComplexity
-    # rubocop:enable Metrics/MethodLength
 
     # Parse the #raw_exchange_rates returned in response
     # @return [Hash] of exchange rates for selling and buying

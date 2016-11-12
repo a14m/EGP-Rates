@@ -1,7 +1,13 @@
 require: rubocop-rspec
 
+AllCops:
+  TargetRubyVersion: 2.3
+
 Metrics/AbcSize:
   Max: 20
+
+Metrics/MethodLength:
+  Max: 15
 
 Style/SignalException:
   Enabled: false
