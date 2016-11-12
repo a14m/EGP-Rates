@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-describe Bank do
+describe EGPRates::Bank do
   subject(:bank) { described_class.new }
 
   describe '#exchange_rates' do

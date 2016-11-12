@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-describe Bank::CBE do
+describe EGPRates::CBE do
   subject(:bank) { described_class.new }
 
   it 'Live Testing', :live do
@@ -25,13 +25,13 @@ describe Bank::CBE do
     it 'raises ResponseError unless Net::HTTPSuccess', :no_vcr do
       stub_request(:get, /.*cbe.*/).to_return(body: '', status: 500)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
-        Bank::ResponseError, '500'
+        EGPRates::Bank::ResponseError, '500'
     end
 
     it 'raises ResponseError if HTML structure changed', :no_vcr do
       stub_request(:get, /.*cbe.*/).to_return(body: '', status: 200)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
-        Bank::ResponseError, 'Unknown HTML'
+        EGPRates::Bank::ResponseError, 'Unknown HTML'
     end
 
     it 'returns <#Enumerator::Lazy> of 9 rows', vcr: { cassette_name: :CBE } do
@@ -51,7 +51,7 @@ describe Bank::CBE do
 
     it 'raises ResponseError when Unknown Currency' do
       expect { bank.send(:currency_symbol, 'Egyptian pound') }.to raise_error\
-        Bank::ResponseError, 'Unknown currency Egyptian pound'
+        EGPRates::Bank::ResponseError, 'Unknown currency Egyptian pound'
     end
   end
 
