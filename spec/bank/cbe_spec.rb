@@ -3,7 +3,7 @@ describe Bank::CBE do
   subject(:bank) { described_class.new }
 
   it 'Live Testing', :live do
-    # expect(bank.exchange_rates).to include(:buy, :sell)
+    expect(bank.exchange_rates).to include(:buy, :sell)
   end
 
   describe '.new' do
