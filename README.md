@@ -2,6 +2,8 @@
 [![wercker status](https://app.wercker.com/status/d6ca4529f0d563e82898ace1f2b3de25/s/master "wercker status")](https://app.wercker.com/project/byKey/d6ca4529f0d563e82898ace1f2b3de25)
 [![Code Climate](https://codeclimate.com/github/mad-raz/EGP-Rates/badges/gpa.svg)](https://codeclimate.com/github/mad-raz/EGP-Rates)
 [![Test Coverage](https://codeclimate.com/github/mad-raz/EGP-Rates/badges/coverage.svg)](https://codeclimate.com/github/mad-raz/EGP-Rates/coverage)
+[![Gem Version](https://badge.fury.io/rb/EGP_Rates.svg)](https://rubygems.org/gems/EGP_Rates)
+[![LICENSE](https://img.shields.io/badge/licence-MIT-blue.svg)](/LICENSE.md)
 
 ## Installation
 
