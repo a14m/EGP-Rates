@@ -43,10 +43,18 @@ module EGPRates
       response = Net::HTTP.start(@uri.hostname, @uri.port) do |http|
         http.request(req)
       end
+      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
+
       response = JSON.parse(response.body)
+
       # CIB provide 6 currencies only
-      fail ResponseError, 'Unknown JSON' unless response['d']&.size >= 6
+      unless response['d'] && response['d'].size >= 6
+        fail ResponseError, "Unknown JSON #{response}"
+      end
+
       response
+    rescue JSON::ParserError
+      raise ResponseError, "Unknown JSON: #{response.body}"
     end
 
     # Parse the #raw_exchange_rates returned in response
