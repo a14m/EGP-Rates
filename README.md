@@ -21,8 +21,11 @@ $ gem install EGP_Rates
 ## Usage
 - Scrape all available Banks (WIP)
 - Scrape [Central Bank of Egypt](/lib/egp_rates/cbe.rb)
+- Scrape [National Bank of Egypt](/lib/egp_rates/nbe.rb)
+
 ```rb
 EGPRates::CBE.new.exchange_rates
+EGPRates::NBE.new.exchange_rates
 ```
 
 ## Development

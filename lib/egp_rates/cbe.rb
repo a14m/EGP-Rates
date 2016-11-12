@@ -30,6 +30,7 @@ module EGPRates
       response = Net::HTTP.get_response(@uri)
       fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_html(response.body).css('tbody').last&.children
+      # CBE porvide 9 currencies on the home page
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 9
       table_rows.lazy.map(&:children).map { |cell| cell.map(&:text) }
     end
@@ -64,9 +65,9 @@ module EGPRates
     #   }
     def parse(raw_data)
       raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
-        sell_rate = row.pop.to_f
-        buy_rate  = row.pop.to_f
-        currency  = currency_symbol(row.pop)
+        sell_rate = row[2].to_f
+        buy_rate  = row[1].to_f
+        currency  = currency_symbol(row[0])
 
         result[:sell][currency] = sell_rate
         result[:buy][currency]  = buy_rate
