@@ -15,7 +15,7 @@ describe EGPRates::NBE do
     end
   end
 
-  describe '#exchange_rates', vcr: { cassette_name: :NBE } do
+  describe '#exchange_rates' do
     it 'calls #parse with #raw_exchange_rates' do
       expect(bank).to receive(:raw_exchange_rates)
       expect(bank).to receive(:parse)
