@@ -7,6 +7,8 @@ require 'egp_rates/cbe'
 require 'egp_rates/nbe'
 require 'egp_rates/cib'
 require 'egp_rates/aaib'
+require 'egp_rates/banque_misr'
+require 'egp_rates/banque_du_caire'
 
 # Base Module
 module EGPRates
