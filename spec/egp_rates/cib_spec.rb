@@ -15,7 +15,7 @@ describe EGPRates::CIB do
     end
   end
 
-  describe '#exchange_rates', vcr: { cassette_name: :CIB } do
+  describe '#exchange_rates' do
     it 'calls #parse with #raw_exchange_rates' do
       expect(bank).to receive(:raw_exchange_rates)
       expect(bank).to receive(:parse)
@@ -68,7 +68,7 @@ describe EGPRates::CIB do
     let(:raw_data) { bank.send(:raw_exchange_rates) }
 
     it 'returns sell: hash of selling prices' do
-      expect(bank.send(:parse, raw_data)[:sell]).to include(
+      expect(bank.send(:parse, raw_data)[:sell]).to match(
         CHF: 16.3176,
         EUR: 17.5234,
         GBP: 20.292,
@@ -79,7 +79,7 @@ describe EGPRates::CIB do
     end
 
     it 'returns buy: hash of buying prices' do
-      expect(bank.send(:parse, raw_data)[:buy]).to include(
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
         CHF: 16.0433,
         EUR: 17.1904,
         GBP: 19.9359,

@@ -15,7 +15,7 @@ describe EGPRates::CBE do
     end
   end
 
-  describe '#exchange_rates', vcr: { cassette_name: :CBE } do
+  describe '#exchange_rates' do
     it 'calls #parse with #raw_exchange_rates' do
       expect(bank).to receive(:raw_exchange_rates)
       expect(bank).to receive(:parse)
@@ -44,7 +44,7 @@ describe EGPRates::CBE do
   end
 
   describe '#currency_symbol' do
-    %w(US Euro Sterling Swiss Japanese Saudi Kuwait UAE Chinese)\
+    %W(#{'US Dollar'} Euro Sterling Swiss Japanese Saudi Kuwait UAE Chinese)\
       .each do |currency|
       it "returns currency :SYM for #{currency}" do
         symbols = %i(USD EUR GBP CHF JPY SAR KWD AED CNY)
@@ -62,7 +62,7 @@ describe EGPRates::CBE do
     let(:raw_data) { bank.send(:raw_exchange_rates) }
 
     it 'returns sell: hash of selling prices' do
-      expect(bank.send(:parse, raw_data)[:sell]).to include(
+      expect(bank.send(:parse, raw_data)[:sell]).to match(
         AED: 4.6524,
         CHF: 17.3096,
         CNY: 2.5138,
@@ -76,7 +76,7 @@ describe EGPRates::CBE do
     end
 
     it 'returns buy: hash of buying prices' do
-      expect(bank.send(:parse, raw_data)[:buy]).to include(
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.4518,
         CHF: 16.551,
         CNY: 2.4052,

@@ -7,7 +7,11 @@ Metrics/AbcSize:
   Max: 20
 
 Metrics/MethodLength:
-  Max: 15
+  Max: 20
+
+LiteralInInterpolation:
+  Exclude:
+    - 'spec/**/*'
 
 Style/SignalException:
   Enabled: false

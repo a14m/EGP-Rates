@@ -56,12 +56,12 @@ module EGPRates
     # rubocop:disable Metrics/CyclomaticComplexity
     def currency_symbol(currency)
       case currency
-      when /US/        then :USD
+      when /US DOLLAR/ then :USD
       when /EURO/      then :EUR
       when /STERLING/  then :GBP
       when /SWISS/     then :CHF
       when /SAUDI/     then :SAR
-      when /KUWAIT/    then :KWD
+      when /KUWAITI/   then :KWD
       when /DIRHAM/    then :AED
       else fail ResponseError, "Unknown currency #{currency}"
       end

@@ -25,12 +25,16 @@ $ gem install EGP_Rates
 - Scrape [National Bank of Egypt (NBE)](/lib/egp_rates/nbe.rb)
 - Scrape [Commercial International Bank (CIB)](/lib/egp_rates/cib.rb)
 - Scrape [Arab African International Bank (AAIb)](/lib/egp_rates/aaib.rb)
+- Scrape [Banque Du Caire](/lib/egp_rates/banque_du_caire.rb)
+- Scrape [Banque Misr](/lib/egp_rates/banque_misr.rb)
 
 ```rb
 EGPRates::CBE.new.exchange_rates
 EGPRates::NBE.new.exchange_rates
 EGPRates::CIB.new.exchange_rates
 EGPRates::AAIB.new.exchange_rates
+EGPRates::BanqueDuCaire.new.exchange_rates
+EGPRates::BanqueMisr.new.exchange_rates
 ```
 
 ## Development
