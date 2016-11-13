@@ -47,7 +47,7 @@ module EGPRates
       # AAIB provide 7 currencies only
       table_rows = Oga.parse_html(response).css('#rates-table tr')
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 7
-      table_rows.lazy.map(&:children).map{ |cell| cell.map(&:text) }
+      table_rows.lazy.map(&:children).map { |cell| cell.map(&:text) }
     end
 
     # Convert currency string to ISO symbol

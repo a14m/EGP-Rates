@@ -81,7 +81,7 @@ describe EGPRates::AAIB do
         GBP: 19.9609,
         KWD: 52.2056,
         SAR: 4.2157,
-        USD: 15.9,
+        USD: 15.9
       )
     end
   end
