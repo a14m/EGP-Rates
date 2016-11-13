@@ -11,5 +11,32 @@ module EGPRates
     def exchange_rates
       raise NotImplementedError
     end
+
+    private
+
+    # Parse the #raw_exchange_rates returned in response
+    # @param [Array] of the raw_data scraped
+    #   [
+    #     [ 'Currency_1', 'BuyRate', 'SellRate', ... ],
+    #     [ 'Currency_2', 'BuyRate', 'SellRate', ... ],
+    #     [ 'Currency_3', 'BuyRate', 'SellRate', ... ],
+    #     ...
+    #   ]
+    #
+    # @return [Hash] of exchange rates for selling and buying
+    #   {
+    #     { sell: { SYM: rate }, { SYM: rate }, ... },
+    #     { buy:  { SYM: rate }, { SYM: rate }, ... }
+    #   }
+    def parse(raw_data)
+      raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
+        sell_rate = row[2].to_f
+        buy_rate  = row[1].to_f
+        currency  = currency_symbol(row[0])
+
+        result[:sell][currency] = sell_rate
+        result[:buy][currency]  = buy_rate
+      end
+    end
   end
 end

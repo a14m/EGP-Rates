@@ -54,22 +54,5 @@ module EGPRates
       end
     end
     # rubocop:enable Metrics/CyclomaticComplexity
-
-    # Parse the #raw_exchange_rates returned in response
-    # @return [Hash] of exchange rates for selling and buying
-    #   {
-    #     { sell: { SYM: rate }, { SYM: rate }, ... },
-    #     { buy:  { SYM: rate }, { SYM: rate }, ... }
-    #   }
-    def parse(raw_data)
-      raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
-        sell_rate = row[2].to_f
-        buy_rate  = row[1].to_f
-        currency  = currency_symbol(row[0])
-
-        result[:sell][currency] = sell_rate
-        result[:buy][currency]  = buy_rate
-      end
-    end
   end
 end
