@@ -46,7 +46,7 @@ describe EGPRates::CIB do
     end
 
     it 'raises ResponseError if malformed JSON respnonse', :no_vcr do
-      stub_request(:post, /.*cib.*/).to_return(body: '"{ data"', status: 200)
+      stub_request(:post, /.*cib.*/).to_return(body: '{ data', status: 200)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
         EGPRates::ResponseError, /Unknown JSON/
     end

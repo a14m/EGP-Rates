@@ -44,7 +44,6 @@ module EGPRates
         http.request(req)
       end
       fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
-
       response = JSON.parse(response.body)
 
       # CIB provide 6 currencies only
