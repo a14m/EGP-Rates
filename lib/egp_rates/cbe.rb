@@ -41,7 +41,7 @@ module EGPRates
     # rubocop:disable Metrics/CyclomaticComplexity
     def currency_symbol(currency)
       case currency
-      when /US/        then :USD
+      when /US Dollar/ then :USD
       when /Euro/      then :EUR
       when /Sterling/  then :GBP
       when /Swiss/     then :CHF

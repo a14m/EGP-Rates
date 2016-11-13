@@ -47,7 +47,7 @@ describe EGPRates::NBE do
     let(:raw_data) { bank.send(:raw_exchange_rates) }
 
     it 'returns sell: hash of selling prices' do
-      expect(bank.send(:parse, raw_data)[:sell]).to include(
+      expect(bank.send(:parse, raw_data)[:sell]).to match(
         AED: 4.3697,
         AUD: 12.2445,
         BAD: 42.5854,
@@ -69,7 +69,7 @@ describe EGPRates::NBE do
     end
 
     it 'returns buy: hash of buying prices' do
-      expect(bank.send(:parse, raw_data)[:buy]).to include(
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.3288,
         AUD: 11.9663,
         BAD: 42.1538,

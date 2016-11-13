@@ -44,7 +44,7 @@ describe EGPRates::AAIB do
   end
 
   describe '#currency_symbol' do
-    %w(US EURO STERLING SWISS SAUDI KUWAIT DIRHAM)\
+    %W(#{'US DOLLAR'} EURO STERLING SWISS SAUDI KUWAITI DIRHAM)\
       .each do |currency|
       it "returns currency :SYM for #{currency}" do
         symbols = %i(USD EUR GBP CHF SAR KWD AED)
@@ -62,7 +62,7 @@ describe EGPRates::AAIB do
     let(:raw_data) { bank.send(:raw_exchange_rates) }
 
     it 'returns sell: hash of selling prices' do
-      expect(bank.send(:parse, raw_data)[:sell]).to include(
+      expect(bank.send(:parse, raw_data)[:sell]).to match(
         AED: 4.3697,
         CHF: 16.3259,
         EUR: 17.5314,
@@ -74,7 +74,7 @@ describe EGPRates::AAIB do
     end
 
     it 'returns buy: hash of buying prices' do
-      expect(bank.send(:parse, raw_data)[:buy]).to include(
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.3043,
         CHF: 16.0687,
         EUR: 17.2213,
