@@ -1,17 +1,16 @@
+---
 engines:
   duplication:
-  	enabled: false
+    enabled: false
     config:
       languages:
-        - ruby
+      - ruby
   fixme:
     enabled: true
   rubocop:
     enabled: true
-  brakeman:
-   	enabled: true
 ratings:
   paths:
   - "**.rb"
 exclude_paths:
-- spec/**/*
+- spec/
