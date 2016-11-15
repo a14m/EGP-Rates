@@ -23,8 +23,11 @@ build:
   steps:
     - bundle-install
     - script:
-      name: rspec
-      code: bundle exec rspec
+      name: rspec local
+      code: bundle exec rspec -t ~live
     - script:
       name: CodeClimate
       code: bundle exec codeclimate-test-reporter
+    - script:
+      name: rspec live testing
+      code: bundle exec rspec -t live
