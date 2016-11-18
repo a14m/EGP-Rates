@@ -2,6 +2,7 @@
 - Support Banque Du Caire
 - Support Banque Misr
 - Support Suez Canal Bank
+- Support Al Baraka Bank
 
 # v0.2.0
 - Support CIB
