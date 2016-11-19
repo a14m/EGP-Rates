@@ -30,4 +30,4 @@ build:
       code: bundle exec codeclimate-test-reporter
     - script:
       name: rspec live testing
-      code: bundle exec rspec -t live
+      code: bundle exec rspec -t live -f progress

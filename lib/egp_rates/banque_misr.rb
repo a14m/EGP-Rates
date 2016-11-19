@@ -27,8 +27,6 @@ module EGPRates
     #   ]
     #
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       # BanqueMisr provide 18 currencies (17 Used and CYPRUS POUND)
       # But they have 2 <tr> for headers
       table_rows = Oga.parse_html(response.body).css('.exchangeRates tbody tr')

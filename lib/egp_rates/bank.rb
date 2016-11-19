@@ -14,6 +14,15 @@ module EGPRates
 
     private
 
+    # Make a call to the @uri to get the raw_response
+    # @return [Net::HTTPSuccess] of the raw response
+    # @raises [ResponseError] if response is not 200 OK
+    def response
+      response = Net::HTTP.get_response(@uri)
+      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
+      response
+    end
+
     # Parse the #raw_exchange_rates returned in response
     # @param [Array] of the raw_data scraped
     #   [

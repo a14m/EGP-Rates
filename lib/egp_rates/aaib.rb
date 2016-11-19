@@ -41,11 +41,9 @@ module EGPRates
     #       ...
     #     ]
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
-      response = response.body&.gsub("\u0000", '')
+      raw = response.body&.gsub("\u0000", '')
       # AAIB provide 7 currencies only
-      table_rows = Oga.parse_html(response).css('#rates-table tr')
+      table_rows = Oga.parse_html(raw).css('#rates-table tr')
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 7
       table_rows.lazy.map(&:children).map { |cell| cell.map(&:text) }
     end

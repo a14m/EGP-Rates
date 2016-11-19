@@ -27,8 +27,6 @@ module EGPRates
     #     "\r\n 18.5933", "\r\n ", "\r\n 20.0448", "\r\n ", ...
     #   ],
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       # Suez Canal Bank provides 13 currencies only
       table_rows = Oga.parse_html(response.body)\
         .css('#Table_01 tr:nth-child(4) > td:nth-child(2) > table tr')
