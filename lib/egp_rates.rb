@@ -10,6 +10,7 @@ require 'egp_rates/aaib'
 require 'egp_rates/banque_misr'
 require 'egp_rates/banque_du_caire'
 require 'egp_rates/suez_canal_bank'
+require 'egp_rates/al_baraka_bank'
 
 # Base Module
 module EGPRates
