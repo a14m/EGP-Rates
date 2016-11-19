@@ -28,8 +28,6 @@ module EGPRates
     #   ]
     #
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       # Banque Du Caire provide 17 currencies only
       table_rows = Oga.parse_html(response.body).css('table.curTbl tr')
       # But they have 1 empty <tr> and 1 header <tr> elements

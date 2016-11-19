@@ -32,8 +32,6 @@ module EGPRates
     #   ]
     #
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_html(response.body).css('table').first&.children
       # AlBarakaBank porvide 7 currencies on the home page
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 8
