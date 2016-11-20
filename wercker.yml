@@ -31,6 +31,3 @@ build:
     - script:
       name: rspec live testing
       code: bundle exec rspec -t live -f progress
-    - script:
-      name: rubocop
-      code: bundle exec rubocop
