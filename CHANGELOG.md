@@ -4,6 +4,7 @@
 - Support Suez Canal Bank
 - Support Al Baraka Bank
 - Support Al Ahly Bank of Kuwait
+- Support SAIB
 
 # v0.2.0
 - Support CIB

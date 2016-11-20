@@ -30,6 +30,7 @@ $ gem install EGP_Rates
 - [Suez Canal Bank](/lib/egp_rates/suez_canal_bank.rb)
 - [Al Baraka Bank](/lib/egp_rates/al_baraka_bank.rb)
 - [Al Ahly Bank of Kuwait](/lib/egp_rates/al_ahly_bank_of_kuwait.rb)
+- [Société Arabe Internationale de Banque (SAIB)](/lib/egp_rates/saib.rb)
 
 ```rb
 EGPRates::CBE.new.exchange_rates
@@ -41,6 +42,7 @@ EGPRates::BanqueMisr.new.exchange_rates
 EGPRates::SuezCanalBank.new.exchange_rates
 EGPRates::AlBarakaBank.new.exchange_rates
 EGPRates::AlAhlyBankOfKuwait.new.exchange_rates
+EGPRates::SAIB.new.exchange_rates
 ```
 
 ## Development
