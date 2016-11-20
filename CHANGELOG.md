@@ -5,6 +5,7 @@
 - Support Al Baraka Bank
 - Support Al Ahli Bank of Kuwait
 - Support SAIB
+- Support MIDB
 
 # v0.2.0
 - Support CIB
