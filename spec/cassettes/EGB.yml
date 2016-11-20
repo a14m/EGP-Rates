@@ -1,0 +1,366 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eg-bank.com/ExchangeRates/ExchangeRates/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - eg-bank.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2016 20:39:09 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d63f224e221bd151f20ded3223c0e97101479674349; expires=Mon, 20-Nov-17
+        20:39:09 GMT; path=/; domain=.eg-bank.com; HttpOnly
+      Cache-Control:
+      - private
+      X-Aspnetmvc-Version:
+      - '5.2'
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - sameorigin
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Content-Security-Policy:
+      - default-src 'self' 'unsafe-inline' 'unsafe-eval'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains; preload
+      X-Host:
+      - eg-bank.com
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 304eb5aa8f2308ab-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\"
+        />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n
+        \   <title>EGBANK -Exchang Rate</title>\r\n\r\n    <link href=\"/images/logoicon.ico\"
+        rel=\"shortcut icon\" type=\"image/x-icon\" />\r\n\r\n\r\n    \r\n    <script
+        src=\"/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1\"></script>\r\n\r\n\r\n
+        \   <link href=\"/Content/bootstrap.css\" rel=\"stylesheet\" />\r\n    <link
+        href=\"/css/font-awesome.min.css\" rel=\"stylesheet\" />\r\n    <link href=\"/Content/animate.css\"
+        rel=\"stylesheet\" />\r\n    <link href=\"/Content/isotope.css\" rel=\"stylesheet\"
+        />\r\n    <link href=\"/Content/jquery-ui.min.css\" rel=\"stylesheet\" />\r\n
+        \   <link href=\"/Content/checkBox.css\" rel=\"stylesheet\" />\r\n    <link
+        href=\"/Content/site.css\" rel=\"stylesheet\" />\r\n    \r\n    <script src=\"/Scripts/jquery-2.2.3.min.js\"></script>\r\n
+        \   <script src=\"/Scripts/jquery-ui.min.js\"></script>\r\n  \r\n    <script
+        src=\"/Scripts/FormatCurrency.js\"></script>\r\n    <script src=\"/Scripts/site.js\"></script>\r\n\r\n
+        \   <link href=\"/Scripts/bootstrap-sweetalert/sweet-alert.css\" rel=\"stylesheet\"
+        />\r\n    <script src=\"/Scripts/bootstrap-sweetalert/sweet-alert.min.js\"></script>\r\n\r\n
+        \   \r\n\r\n    <link href=\"/Content/css/datepicker.min.css\" rel=\"stylesheet\"
+        />\r\n    <script src=\"/Scripts/datepicker.min.js\"></script>\r\n    <script
+        src=\"/Scripts/i18n/datepicker.en.js\"></script>\r\n\r\n    <link href=\"/Content/menu/css/superfish.css\"
+        rel=\"stylesheet\" />\r\n    <script src=\"/Content/menu/js/superclick.js\"></script>\r\n\r\n
+        \   <script>\r\n    (function ($) { //create closure so we can safely use
+        $ as alias for jQuery\r\n        $(document).ready(function () {\r\n\r\n            //
+        initialise plugin\r\n            var primaryMenu = $('#primaryMenu').superclick({\r\n
+        \               //add options here if required\r\n            });\r\n\r\n
+        \           var secondaryMenu = $('#secondaryMenu').superclick({\r\n                //add
+        options here if required\r\n            });\r\n            \r\n        });\r\n\r\n
+        \   })(jQuery);\r\n    </script>\r\n\r\n    <meta name=\"summary\" content=\"EGBABK
+        Egypt personal banking offers a range of bank accounts with online banking.
+        For more info check our official website.\" />\r\n    <meta name=\"description\"
+        content=\"EGBABK Egypt personal banking offers a range of bank accounts with
+        online banking. For more info check our official website.\" />\r\n    <meta
+        name=\"keywords\" content=\"banks in egypt, personal banking, egypt bank ,
+        EGB, EGBBANK,Loan, Car Loan , Personal Loan \" />\r\n</head>\r\n\r\n<body
+        class=\"front\" >\r\n    <div class=\"top1_wrapper\">\r\n        <div class=\"row\">\r\n
+        \           <div class=\"content-container\">\r\n                <div class=\"col-xs-3
+        col-md-3 no-padding\">\r\n                    <a href=\"/Home/index\"><img
+        class=\"logo img img-responsive\" src=\"/images/logo.png\" /></a>\r\n                </div>\r\n\r\n
+        \               <div class=\"col-xs-6 col-md-8 text-right\">\r\n\r\n                </div>\r\n\r\n\r\n
+        \                   <div class=\"col-xs-3 col-md-1 pull-right no-padding\">\r\n
+        \                       <div class=\"text-right\">\r\n                            <a
+        href=\"/Home/Index\">EN</a>\r\n                            <span>|</span>\r\n
+        \                           <a href=\"/Home/CommingSoon\">AR</a>\r\n                        </div>\r\n
+        \                   </div>\r\n                </div>\r\n        </div>\r\n\r\n
+        \       <div class=\"row\">\r\n            <div class=\"content-container\">\r\n
+        \               <div class=\"navbar navbar_ navbar-default secondary navbar-right\">\r\n
+        \                   <button type=\"button\" class=\"navbar-toggle collapsed\"
+        data-toggle=\"collapse\" data-target=\".navbar-collapse.second\">\r\n                        <span
+        class=\"sr-only\">Toggle navigation</span>\r\n                        <span
+        class=\"icon-bar\"></span>\r\n                        <span class=\"icon-bar\"></span>\r\n
+        \                       <span class=\"icon-bar\"></span>\r\n                    </button>\r\n
+        \                   <div class=\"navbar-collapse second navbar-collapse_ collapse
+        \">\r\n                        <ul class=\"nav nav-bar sf-menu\" id=\"secondaryMenu\">\r\n
+        \                           <li class=\"sub-menu\">\r\n                                <a
+        href=\"/Home/Index\">Home</a>\r\n                            </li>\r\n                            <li
+        class=\"sub-menu\">\r\n                                <a>About Us</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/Ourbank\">Our Bank</a></li>\r\n                                    <li><a
+        href=\"/Home/OurTeam\">Our Team</a></li>\r\n                                    \r\n
+        \                                   <li><a href=\"/Home/OurValues\">Our Values</a></li>\r\n
+        \                               </ul>\r\n                            </li>\r\n
+        \                           <li class=\"sub-menu\">\r\n                                <a>Find
+        Us</a>\r\n                                <ul>\r\n                                    <li><a
+        href=\"/Home/CountactUS#BranchesNetwork\">Branches & ATM Network</a></li>\r\n
+        \                                   \r\n                                    <li><a
+        href=\"/Home/CountactUS#callUs\">Call Center & Head Office</a></li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a href=\"https://myegbank.com/ \">Online
+        Banking</a>\r\n                            </li>\r\n                           \r\n
+        \                           <li class=\"sub-menu\">\r\n                                <a>Investor
+        relations</a>\r\n                                <ul>\r\n                                    <li><a
+        href=\"/Home/FinancialStatements\">Financial Statements</a></li>\r\n                                    <li><a
+        href=\"/Home/OurTeam#Shareholders\">Shareholders</a></li>\r\n                                    <li><a
+        href=\"/Home/Mist\">Stocks & News</a></li>\r\n                                    \r\n
+        \                               </ul>\r\n                            </li>\r\n
+        \                           <li class=\"sub-menu\">\r\n                                <a
+        href=\"/Home/News\">News</a>\r\n                            </li>\r\n                            <li
+        class=\"sub-menu\">\r\n                                <a href=\"/Home/Careersoppotunities\">Careers</a>\r\n
+        \                               \r\n                            </li>\r\n
+        \                           \r\n                            <li class=\"search-box\">\r\n
+        \                               <form class=\"navbar-form\" role=\"search\">
+        \                            \r\n                            <div class=\"input-group
+        add-on\">\r\n                                <input type=\"text\" class=\"form-control\"
+        id=\"txtSearch\">\r\n                                <div class=\"input-group-btn\">\r\n
+        \                                   <button class=\"btn btn-default\" onclick=\"return
+        RedirectToSecondPage()\"><i class=\"glyphicon glyphicon-search\"></i></button>\r\n
+        \                               </div>\r\n                            </div>\r\n\r\n
+        \                       </form>\r\n                            </li>\r\n                        </ul>\r\n\r\n
+        \                       \r\n\r\n                        <script type=\"text/javascript\">\r\n
+        \                               function RedirectToSecondPage()\r\n                                {\r\n
+        \                                   debugger;\r\n                                 var
+        input = document.getElementById('txtSearch');\r\n                                 var
+        value = input ? input.value : 'defaultText';\r\n\r\n                                 window.location
+        = '/Home/SearchResults?query=' + value;\r\n                                 return
+        false;\r\n                                }\r\n                        </script>\r\n\r\n
+        \                   </div>\r\n                </div>\r\n            </div>\r\n
+        \       </div>\r\n    </div>\r\n\r\n    <div id=\"top2_wrapper\" class=\"row\">\r\n
+        \       <div class=\"content-container\">\r\n            <div class=\"menu_wrapper\">\r\n
+        \               <div class=\"navbar navbar_ navbar-default\">\r\n                    <button
+        type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\"
+        data-target=\".navbar-collapse.primary\">\r\n                        <span
+        class=\"sr-only\">Toggle navigation</span>\r\n                        <span
+        class=\"icon-bar\"></span>\r\n                        <span class=\"icon-bar\"></span>\r\n
+        \                       <span class=\"icon-bar\"></span>\r\n                    </button>\r\n
+        \                   <div class=\"navbar-collapse navbar-collapse_ collapse
+        primary\">\r\n                        <ul class=\"nav navbar-nav sf-menu\"
+        \ id=\"primaryMenu\">\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a class=\"fifth_col\">Retail Banking</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/RetailOverview\">Overview</a></li>\r\n                                    <li><a
+        href=\"/Home/SavingRetail\">Savings</a></li>\r\n                                    <li><a
+        href=\"/Home/AccountsRetail\">Accounts</a></li>\r\n                                    <li
+        class=\"sub-menu sub-menu-2\">\r\n                                        <a>Cards</a>\r\n
+        \                                       <ul>\r\n                                            <li><a
+        href=\"/Home/DebitCards\">Debit Cards</a></li>\r\n                                            <li><a
+        href=\"/Home/CreditCards\">Credit Cards</a></li>\r\n                                        </ul>\r\n
+        \                                   </li>\r\n                                    <li><a
+        href=\"/Home/Loans\">Loans</a></li>\r\n                                    <li><a
+        href=\"/Home/Payroll\">Payroll</a></li>\r\n                                    <li
+        class=\"sub-menu sub-menu-2\">\r\n                                        <a>Funds</a>\r\n
+        \                                       <ul>\r\n                                            <li><a
+        href=\"/Home/Funds\">Tharaa</a></li>\r\n                                            <li><a
+        href=\"/Home/EgyptianGulfFund\">Egyptian Gulf Fund</a></li>\r\n                                        </ul>\r\n
+        \                                   </li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a class=\"fifth_col\">Prime Banking</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/Prime\">Products & Services</a></li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a class=\"fifth_col\">Private Banking</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/Private\">Products & Services</a></li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a class=\"fifth_col\">Islamic Banking</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/Islamic\">Products & Services</a></li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu\">\r\n
+        \                               <a class=\"fifth_col\">Corporate Banking</a>\r\n
+        \                               <ul>\r\n                                    <li><a
+        href=\"/Home/CorporateBanking\">Products & Services</a></li>\r\n                                </ul>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu
+        mint\">\r\n                                <a href=\"/Home/Mint\">\r\n                                    <img
+        class=\"img img-responsive\" src=\"/images/mint.png\" />\r\n                                </a>\r\n
+        \                           </li>\r\n                            <li class=\"sub-menu
+        green pull-right\">\r\n                                <a href=\"#\">\r\n
+        \                                   <img class=\"img img-responsive\" src=\"/images/gogreen.png\"
+        />\r\n                                </a>\r\n                                <ul>\r\n
+        \                                   <li><a href=\"/Home/GoGreen\">Responsibility</a></li>\r\n
+        \                               </ul>\r\n                            </li>\r\n
+        \                       </ul>\r\n                        \r\n                    </div>\r\n
+        \               </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n
+        \   <div class=\"body-content\">\r\n        \r\n\r\n\r\n<div class=\"container\">\r\n
+        \   <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n            <span
+        class=\"page-title\"><b>EG</b>BANK Currencies Exchange Rates</span>\r\n                    <span
+        class=\"fg-darkblue\">Last updated: 11/20/2016 7:04:51 PM</span>\r\n\r\n        </div>\r\n
+        \   </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-xs-12 text-center\">\r\n
+        \           <div class=\"row row-wrapper focuced-txt bold-text \">\r\n                <div
+        class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                    Currency\r\n
+        \               </div>\r\n                <div class=\"col-xs-3 col-xs-offset-1
+        fg-darkblue\">\r\n                    Buy\r\n                </div>\r\n                <div
+        class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                    Sell\r\n
+        \               </div>\r\n            </div>\r\n            <hr class=\"first-hr\">\r\n
+        \       <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                USD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                17.00\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               17.75\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                EUR\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                17.9639\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               18.8896\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                GBP\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                20.9049\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               22.0739\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                JPY\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                0.1532\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               0.1617\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                CHF\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                16.7918\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               17.6529\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                AUD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                12.4525\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               13.1670\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                CAD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                12.5332\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               13.1598\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                DKK\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                2.4152\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               2.5395\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                SEK\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                1.8314\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               1.9245\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                NOK\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                1.9747\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               2.0809\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                SAR\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                4.5325\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               4.7327\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                AED\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                4.6281\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               4.8326\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                QAR\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                4.6685\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               4.8753\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                KWD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                55.7560\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               58.2349\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                JOD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                23.9437\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               25.0706\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                BHD\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                45.0689\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               47.0822\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        <div class=\"row row-wrapper\">\r\n            <div class=\"col-xs-3
+        col-xs-offset-1 bold-text\">\r\n                OMR\r\n            </div>\r\n
+        \           <div class=\"col-xs-3 col-xs-offset-1 fg-darkblue\">\r\n                44.1558\r\n
+        \           </div>\r\n            <div class=\"col-xs-3 col-xs-offset-1 fg-cyan\">\r\n
+        \               46.1159\r\n            </div>\r\n        </div>\r\n        <hr
+        />\r\n        </div>\r\n    </div>\r\n</div>\r\n    </div>\r\n\r\n    <div
+        class=\"row\">\r\n        <div id=\"banner_wrapper\" class=\"content-container\">\r\n
+        \           <div id=\"banner_inner\">\r\n                <div id=\"banner\">\r\n
+        \                   <div class=\"container\">\r\n                        <a
+        class=\"banner_prev col-sm-1\" href=\"#\"></a>\r\n                        <a
+        class=\"banner_next col-sm-1\" href=\"#\"></a>\r\n                        <div
+        class=\"carousel-box\">\r\n                            <div class=\"inner\">\r\n
+        \                               <div class=\"carousel main\">\r\n                                    <ul>\r\n
+        \                                       \r\n                                        <li
+        class=\"col-sm-3\">\r\n                                            <div class=\"banner\">\r\n
+        \                                               <div class=\"banner_inner\">\r\n
+        \                                                   <a href=\"/ExchangeRates/ExchangeRates/\">\r\n
+        \                                                       <figure><img src=\"/images/Exchange-rats_icons2.jpg\"
+        alt=\"\" class=\"img-responsive\"><em></em></figure>\r\n                                                    </a>\r\n
+        \                                               </div>\r\n                                            </div>\r\n
+        \                                       </li>\r\n                                        <li
+        class=\"col-sm-3\">\r\n                                            <div class=\"banner\">\r\n
+        \                                               <div class=\"banner_inner\">\r\n
+        \                                                   <a href=\"/Home/CommingSoon\">\r\n
+        \                                                       <figure>\r\n                                                            <img
+        src=\"/images/Open--Account_icons2.jpg\" alt=\"\" class=\"img img-responsive\">\r\n
+        \                                                           <em></em>\r\n
+        \                                                       </figure>\r\n                                                    </a>\r\n
+        \                                               </div>\r\n                                            </div>\r\n
+        \                                       </li>\r\n                                        \r\n
+        \                                       <li class=\"col-sm-3\">\r\n                                            <div
+        class=\"banner\">\r\n                                                <div
+        class=\"banner_inner\">\r\n                                                    <a
+        href=\"/home/LoanCalculator\">\r\n                                                        <figure><img
+        src=\"/images/Loan-Calculator_icons2.jpg\" alt=\"\" class=\"img-responsive\"><em></em></figure>\r\n
+        \                                                   </a>\r\n                                                </div>\r\n
+        \                                           </div>\r\n                                        </li>\r\n
+        \                                       <li class=\"col-sm-3\">\r\n                                            <div
+        class=\"banner\">\r\n                                                <div
+        class=\"banner_inner\">\r\n                                                    <a
+        href=\"/Home/YourFeedback\">\r\n                                                        <figure><img
+        src=\"/images/Your--Feedback_icons2.jpg\" alt=\"\" class=\"img-responsive\"><em></em></figure>\r\n
+        \                                                   </a>\r\n                                                </div>\r\n
+        \                                           </div>\r\n                                        </li>\r\n
+        \                                       \r\n                                    </ul>\r\n
+        \                               </div>\r\n                            </div>\r\n
+        \                       </div>\r\n                    </div>\r\n                </div>\r\n
+        \           </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"footer-menu-wrapper
+        bg-light-gray\">\r\n        <div class=\"row\">\r\n            <div class=\"content-container\">\r\n
+        \               <div class=\"col-xs-4\">\r\n                    \r\n                    <div
+        class=\"footer-menu-items\">\r\n                        \r\n                        <div>\r\n
+        \                           <a href=\"/Home/SiteMap\">Sitemap</a>\r\n                        </div>\r\n
+        \                   </div>\r\n                </div>\r\n\r\n                \r\n\r\n
+        \               \r\n                    \r\n\r\n                    <div class=\"col-xs-8\">\r\n
+        \                      \r\n                                    <div class=\"fg-cyan
+        bold-text lger-text text-right\"><i class=\"fa fa-phone\" aria-hidden=\"true\"></i>
+        19342 <i class=\"fa fa-phone-square\" aria-hidden=\"true\"></i> 25984900</div>\r\n
+        \                          \r\n                    </div>\r\n                \r\n\r\n
+        \           </div>\r\n        </div>\r\n    </div>\r\n\r\n    <footer>\r\n
+        \       Copyright 2016. EGBank. | All Rights Reserved    B 16.11.20.1 23\r\n
+        \   </footer>\r\n\r\n    <script src=\"/bundles/jquery?v=UlNWVjpvdIidU6n58OFPa31mrQQ1aGUzRc4LscjP2fQ1\"></script>\r\n\r\n
+        \   <script src=\"/bundles/bootstrap?v=YNTiUjsxFgxFopZPgK4Um_uOmRJtoZV0d3JXM-Bhgco1\"></script>\r\n\r\n
+        \   <script src=\"/bundles/siteScripts?v=e6sFBheEstndGrDy9ZfiC_z1DZSTtRYt61aZr9zA2-s1\"></script>\r\n\r\n
+        \ \r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Sun, 20 Nov 2016 20:39:09 GMT
+recorded_with: VCR 3.0.3
