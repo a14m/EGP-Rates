@@ -11,7 +11,7 @@ require 'egp_rates/banque_misr'
 require 'egp_rates/banque_du_caire'
 require 'egp_rates/suez_canal_bank'
 require 'egp_rates/al_baraka_bank'
-require 'egp_rates/al_ahly_bank_of_kuwait'
+require 'egp_rates/al_ahli_bank_of_kuwait'
 require 'egp_rates/saib'
 
 # Base Module

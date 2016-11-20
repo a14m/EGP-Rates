@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-describe EGPRates::AlAhlyBankOfKuwait do
+describe EGPRates::AlAhliBankOfKuwait do
   subject(:bank) { described_class.new }
 
   it 'Live Testing', :live do
@@ -10,7 +10,7 @@ describe EGPRates::AlAhlyBankOfKuwait do
 
   describe '.new' do
     it 'initialize instance variables' do
-      expect(bank.sym).to eq :AlAhlyBankOfKuwait
+      expect(bank.sym).to eq :AlAhliBankOfKuwait
       expect(bank.instance_variable_get(:@uri)).to be_a URI
     end
   end
@@ -37,14 +37,14 @@ describe EGPRates::AlAhlyBankOfKuwait do
     end
 
     it 'returns <#Enumerator::Lazy> of 8 rows',
-       vcr: { cassette_name: :AlAhlyBankOfKuwait } do
+       vcr: { cassette_name: :AlAhliBankOfKuwait } do
       lazy_enumerator = bank.send(:raw_exchange_rates)
       expect(lazy_enumerator).to be_a Enumerator::Lazy
       expect(lazy_enumerator.size).to eq 8
     end
   end
 
-  describe '#parse', vcr: { cassette_name: :AlAhlyBankOfKuwait } do
+  describe '#parse', vcr: { cassette_name: :AlAhliBankOfKuwait } do
     let(:raw_data) { bank.send(:raw_exchange_rates) }
 
     it 'returns sell: hash of selling prices' do

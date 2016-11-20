@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 module EGPRates
   # Central Bank of Egypt
-  class AlAhlyBankOfKuwait < EGPRates::Bank
+  class AlAhliBankOfKuwait < EGPRates::Bank
     def initialize
-      @sym = :AlAhlyBankOfKuwait
+      @sym = :AlAhliBankOfKuwait
       @uri = URI.parse('http://www.piraeusbank.com.eg/rates_abk.aspx')
     end
 
@@ -33,7 +33,7 @@ module EGPRates
       response = Net::HTTP.get_response(@uri)
       fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_html(response.body).css('.ORANGE_TEXT, .BLUE_TEXT')
-      # AlAhlyBankOfKuwait porvide 8 currencies on the home page
+      # AlAhliBankOfKuwait porvide 8 currencies on the home page
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 8
       table_rows.lazy.map(&:children).map do |cell|
         cell.map(&:text).map(&:strip)
