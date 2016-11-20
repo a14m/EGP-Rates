@@ -16,7 +16,6 @@ module EGPRates
       @exchange_rates ||= parse(raw_exchange_rates)
     end
 
-
     # Send the request to the URL and retrun raw data of the response
     # @return [Enumerator::Lazy] with the table row in HTML that evaluates to
     #   [
@@ -26,6 +25,7 @@ module EGPRates
     #     "\r\n ", "\r\n ", "\r\n ", "\r\n Sterling Pound", "\r\n ",
     #     "\r\n 18.5933", "\r\n ", "\r\n 20.0448", "\r\n ", ...
     #   ],
+    # rubocop:disable Style/MultilineMethodCallIndentation
     def raw_exchange_rates
       # Suez Canal Bank provides 13 currencies only
       table_rows = Oga.parse_html(response.body)\
@@ -34,6 +34,7 @@ module EGPRates
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 15
       table_rows.lazy.drop(2).map(&:children).map { |cell| cell.map(&:text) }
     end
+    # rubocop:enable Style/MultilineMethodCallIndentation
 
     # Convert currency string to ISO symbol
     # @param currency [String] "US Dollar"
