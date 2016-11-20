@@ -37,6 +37,7 @@ $ gem install EGP_Rates
 - [Bank of Alexandria (AlexBank)](/lib/egp_rates/alex_bank.rb)
 - [Blom Bank Egypt (Blom)](/lib/egp_rates/blom.rb)
 - [Abu Dhabi Islamic Bank (ADIB)](/lib/egp_rates/adib.rb)
+- [Egyptian Gulf Bank (EGB)](/lib/egp_rates/egp.rb)
 
 ```rb
 EGPRates::CBE.new.exchange_rates
@@ -56,6 +57,7 @@ EGPRates::EDBE.new.exchange_rates
 EGPRates::AlexBank.new.exchange_rates
 EGPRates::Blom.new.exchange_rates
 EGPRates::ADIB.new.exchange_rates
+EGPRates::EGB.new.exchange_rates
 ```
 
 ## Development
