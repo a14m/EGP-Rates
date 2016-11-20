@@ -29,8 +29,6 @@ module EGPRates
     #     ...
     #   ]
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_html(response.body)
                       .css('#MainContent_grdcurrency tr')
       # MIDB porvide 7 currencies on the home page but with header

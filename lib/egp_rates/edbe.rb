@@ -28,8 +28,6 @@ module EGPRates
     #     ...
     #   ]
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_xml(response.body).xpath('Details/rates')
       # EDBE porvide 5 as 20 XML attributes
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 1
