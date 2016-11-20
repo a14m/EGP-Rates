@@ -20,7 +20,6 @@ $ gem install EGP_Rates
 ```
 
 ## Usage
-- Scrape all available Banks (WIP)
 - [Central Bank of Egypt (CBE)](/lib/egp_rates/cbe.rb)
 - [National Bank of Egypt (NBE)](/lib/egp_rates/nbe.rb)
 - [Commercial International Bank (CIB)](/lib/egp_rates/cib.rb)
@@ -36,6 +35,7 @@ $ gem install EGP_Rates
 - [Crédit Agricole Egypt (CAE)](/lib/egp_rates/cae.rb)
 - [Export Development Bank of Egypt (EDBE)](/lib/egp_rates/edbe.rb)
 - [Bank of Alexandria (AlexBank)](/lib/egp_rates/alex_bank.rb)
+- [Blom Bank Egypt (Blom)](/lib/egp_rates/blom.rb)
 
 ```rb
 EGPRates::CBE.new.exchange_rates
@@ -53,6 +53,7 @@ EGPRates::UBE.new.exchange_rates
 EGPRates::CAE.new.exchange_rates
 EGPRates::EDBE.new.exchange_rates
 EGPRates::AlexBank.new.exchange_rates
+EGPRates::Blom.new.exchange_rates
 ```
 
 ## Development

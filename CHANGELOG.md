@@ -1,6 +1,7 @@
 # v0.4.0
 - Support Export Development Bank of Egypt (EDBE)
 - Support Bank of Alexandria (AlexBank)
+- Support Blom Bank Egypt (Blom)
 - Fix BanqueMisr swapping CHF and SEK exchange rates
 
 # v0.3.0
