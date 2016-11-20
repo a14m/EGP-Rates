@@ -6,6 +6,7 @@
 - Support Al Ahli Bank of Kuwait
 - Support SAIB
 - Support MIDB
+- Support The United Bank of Egypt
 
 # v0.2.0
 - Support CIB
