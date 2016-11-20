@@ -16,6 +16,7 @@ require 'egp_rates/saib'
 require 'egp_rates/midb'
 require 'egp_rates/ube'
 require 'egp_rates/cae'
+require 'egp_rates/edbe'
 
 # Base Module
 module EGPRates
