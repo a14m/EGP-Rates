@@ -36,29 +36,6 @@ module EGPRates
     end
     # rubocop:enable Style/MultilineMethodCallIndentation
 
-    # Convert currency string to ISO symbol
-    # @param currency [String] "US Dollar"
-    # @return [Symbol] :USD ISO currency name
-    # rubocop:disable Metrics/CyclomaticComplexity
-    def currency_symbol(currency)
-      case currency
-      when /UAE Dirham/ then :AED
-      when /Australian/ then :AUD
-      when /Canadian/   then :CAD
-      when /Swiss/      then :CHF
-      when /Danish/     then :DKK
-      when /EUR/        then :EUR
-      when /Sterling/   then :GBP
-      when /YEN/        then :JPY
-      when /Kuwaiti/    then :KWD
-      when /Norwegian/  then :NOK
-      when /Saudi/      then :SAR
-      when /Swedish/    then :SEK
-      when /US Dollar/  then :USD
-      else fail ResponseError, "Unknown currency #{currency}"
-      end
-    end
-
     # Parse the #raw_exchange_rates returned in response
     # @param [Array] of the raw_data scraped
     # @return [Hash] of exchange rates for selling and buying
