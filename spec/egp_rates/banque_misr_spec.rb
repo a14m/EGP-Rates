@@ -6,6 +6,14 @@ describe EGPRates::BanqueMisr do
     expect(bank.exchange_rates).to include(:buy, :sell)
     expect(bank.exchange_rates[:buy].size).to eq 17
     expect(bank.exchange_rates[:sell].size).to eq 17
+    expect(bank.exchange_rates[:buy].keys).to include(
+      :USD, :AUD, :BHD, :GBP, :CAD, :DKK, :AED, :EUR, :CHF, :SEK,
+      :JPY, :JOD, :NOK, :OMR, :QAR, :SAR, :KWD
+    )
+    expect(bank.exchange_rates[:sell].keys).to include(
+      :USD, :AUD, :BHD, :GBP, :CAD, :DKK, :AED, :EUR, :CHF, :SEK,
+      :JPY, :JOD, :NOK, :OMR, :QAR, :SAR, :KWD
+    )
   end
 
   describe '.new' do
