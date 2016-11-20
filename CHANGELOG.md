@@ -3,6 +3,7 @@
 - Support Banque Misr
 - Support Suez Canal Bank
 - Support Al Baraka Bank
+- Support Al Ahly Bank of Kuwait
 
 # v0.2.0
 - Support CIB
