@@ -1,3 +1,6 @@
+# v0.4.0
+- Support Export Development Bank of Egypt (EDBE)
+
 # v0.3.0
 - Support Banque Du Caire
 - Support Banque Misr
