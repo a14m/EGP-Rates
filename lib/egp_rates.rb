@@ -15,6 +15,7 @@ require 'egp_rates/al_ahli_bank_of_kuwait'
 require 'egp_rates/saib'
 require 'egp_rates/midb'
 require 'egp_rates/ube'
+require 'egp_rates/cae'
 
 # Base Module
 module EGPRates
