@@ -33,6 +33,7 @@ $ gem install EGP_Rates
 - [Société Arabe Internationale de Banque (SAIB)](/lib/egp_rates/saib.rb)
 - [Misr Iran Development Bank (MIDB)](/lib/egp_rates/midb.rb)
 - [The United Bank of Egypt (UBE)](/lib/egp_rates/ube.rb)
+- [Crédit Agricole Egypt (CAE)](/lib/egp_rates/cae.rb)
 
 ```rb
 EGPRates::CBE.new.exchange_rates
@@ -47,6 +48,7 @@ EGPRates::AlAhliBankOfKuwait.new.exchange_rates
 EGPRates::SAIB.new.exchange_rates
 EGPRates::MIDB.new.exchange_rates
 EGPRates::UBE.new.exchange_rates
+EGPRates::CAE.new.exchange_rates
 ```
 
 ## Development

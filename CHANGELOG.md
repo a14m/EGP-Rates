@@ -7,6 +7,7 @@
 - Support SAIB
 - Support MIDB
 - Support The United Bank of Egypt
+- Support Crédit Agricole Egypt (CAE)
 
 # v0.2.0
 - Support CIB
