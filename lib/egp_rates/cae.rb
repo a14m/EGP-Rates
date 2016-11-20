@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module EGPRates
-  # Central Bank of Egypt
+  # Crédit Agricole Egypt (CAE)
   class CAE < EGPRates::Bank
     def initialize
       @sym = :CAE

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module EGPRates
-  # National Bank of Egypt
+  # Commercial International Bank (CIB)
   class CIB < EGPRates::Bank
     def initialize
       @sym = :CIB
@@ -57,6 +57,7 @@ module EGPRates
     end
 
     # Parse the #raw_exchange_rates returned in response
+    # @param [Array] of the raw_data scraped
     # @return [Hash] of exchange rates for selling and buying
     #   {
     #     { sell: { SYM: rate }, { SYM: rate }, ... },

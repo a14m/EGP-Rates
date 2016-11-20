@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module EGPRates
-  # Central Bank of Egypt
+  # The United Bank of Egypt (UBE)
   class UBE < EGPRates::Bank
     def initialize
       @sym = :UBE

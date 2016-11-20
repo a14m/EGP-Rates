@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module EGPRates
-  # Arab African International Bank
+  # Banque Misr
   class BanqueMisr < EGPRates::Bank
     def initialize
       @sym = :BanqueMisr

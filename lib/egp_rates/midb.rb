@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module EGPRates
-  # Central Bank of Egypt
+  # Misr Iran Development Bank (MIDB)
   class MIDB < EGPRates::Bank
     def initialize
       @sym = :MIDB

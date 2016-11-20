@@ -42,12 +42,6 @@ module EGPRates
 
     # Parse the #raw_exchange_rates returned in response
     # @param [Array] of the raw_data scraped
-    #   [
-    #     [ '', 'Currency_1', '', ..., 'BuyRate', '', 'SellRate'],
-    #     [ '', 'Currency_2', '', ..., 'BuyRate', '', 'SellRate'],
-    #     ...
-    #   ]
-    #
     # @return [Hash] of exchange rates for selling and buying
     #   {
     #     { sell: { SYM: rate }, { SYM: rate }, ... },
