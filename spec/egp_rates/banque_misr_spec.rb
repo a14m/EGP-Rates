@@ -78,7 +78,7 @@ describe EGPRates::BanqueMisr do
         AUD: 12.1317,
         BHD: 42.1928,
         CAD: 11.8178,
-        CHF: 1.7622,
+        CHF: 16.1754,
         DKK: 2.334,
         EUR: 17.3698,
         GBP: 20.1527,
@@ -89,7 +89,7 @@ describe EGPRates::BanqueMisr do
         OMR: 41.3147,
         QAR: 4.3677,
         SAR: 4.24,
-        SEK: 16.1754,
+        SEK: 1.7622,
         USD: 15.91
       )
     end
@@ -100,7 +100,7 @@ describe EGPRates::BanqueMisr do
         AUD: 11.5524,
         BHD: 40.6957,
         CAD: 11.3309,
-        CHF: 1.6843,
+        CHF: 15.5129,
         DKK: 2.2338,
         EUR: 16.6256,
         GBP: 19.2289,
@@ -111,7 +111,7 @@ describe EGPRates::BanqueMisr do
         OMR: 39.8339,
         QAR: 4.2154,
         SAR: 4.0927,
-        SEK: 15.5129,
+        SEK: 1.6843,
         USD: 15.35
       )
     end
