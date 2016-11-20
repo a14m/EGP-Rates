@@ -1,5 +1,6 @@
 # v0.4.0
 - Support Export Development Bank of Egypt (EDBE)
+- Support Bank of Alexandria (AlexBank)
 
 # v0.3.0
 - Support Banque Du Caire
