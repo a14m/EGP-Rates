@@ -48,7 +48,7 @@ module EGPRates
       when /AUSTRALIA/  then :AUD
       when /BAHRAIN/    then :BHD
       when /CANADA/     then :CAD
-      when /SWEDISH/    then :CHF
+      when /SWISS/      then :CHF
       when /DENMARK/    then :DKK
       when /EURO/       then :EUR
       when /GB POUND/   then :GBP
@@ -59,7 +59,7 @@ module EGPRates
       when /OMAN/       then :OMR
       when /QATARI/     then :QAR
       when /SAUDI/      then :SAR
-      when /SWISS/      then :SEK
+      when /SWEDISH/    then :SEK
       when /US DOLLAR/  then :USD
       else fail ResponseError, "Unknown currency #{currency}"
       end

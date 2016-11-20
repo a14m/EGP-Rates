@@ -38,24 +38,6 @@ module EGPRates
       table_rows.lazy.drop(1).map(&:children).map { |cell| cell.map(&:text) }
     end
 
-    # Convert currency string to ISO symbol
-    # @param currency [String] "US Dollar"
-    # @return [Symbol] :USD ISO currency name
-    # rubocop:disable Metrics/CyclomaticComplexity
-    def currency_symbol(currency)
-      case currency
-      when /USD/       then :USD
-      when /EURO/      then :EUR
-      when /GBP/       then :GBP
-      when /CHF/       then :CHF
-      when /JPY/       then :JPY
-      when /SAR/       then :SAR
-      when /BHD/       then :BHD
-      else fail ResponseError, "Unknown currency #{currency}"
-      end
-    end
-    # rubocop:enable Metrics/CyclomaticComplexity
-
     # Parse the #raw_exchange_rates returned in response
     # @param [Array] of the raw_data scraped
     #   [

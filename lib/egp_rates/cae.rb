@@ -26,8 +26,6 @@ module EGPRates
     #     ...
     #   ]
     def raw_exchange_rates
-      response = Net::HTTP.get_response(@uri)
-      fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       table_rows = Oga.parse_html(response.body).css('#f_box option')
       # CAE porvide 17 currencies on the home page but with header
       # and an empty row in the end

@@ -34,33 +34,5 @@ module EGPRates
       fail ResponseError, 'Unknown HTML' unless table_rows&.size == 19
       table_rows.lazy.drop(2).map(&:children).map { |cell| cell.map(&:text) }
     end
-
-    # Convert currency string to ISO symbol
-    # @param currency [String] "US Dollar"
-    # @return [Symbol] :USD ISO currency name
-    # rubocop:disable Metrics/CyclomaticComplexity
-    def currency_symbol(currency)
-      case currency
-      when /EMIRATES/   then :AED
-      when /AUSTRALIAN/ then :AUD
-      when /BAHRAIN/    then :BHD
-      when /CANADIAN/   then :CAD
-      when /SWISS/      then :CHF
-      when /DANISH/     then :DKK
-      when /EURO/       then :EUR
-      when /BRITISH/    then :GBP
-      when /JORDANIAN/  then :JOD
-      when /JAPANESE/   then :JPY
-      when /KUWAITI/    then :KWD
-      when /NORWEGIAN/  then :NOK
-      when /OMANI/      then :OMR
-      when /QATAR/      then :QAR
-      when /SAUDI/      then :SAR
-      when /SWEDISH/    then :SEK
-      when /US DOLLAR/  then :USD
-      else fail ResponseError, "Unknown currency #{currency}"
-      end
-    end
-    # rubocop:enable Metrics/CyclomaticComplexity
   end
 end

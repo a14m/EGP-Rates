@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 module EGPRates
-  # Arab African International Bank
-  class AAIB < EGPRates::Bank
+  # Bank of Alexandria
+  class AlexBank < EGPRates::Bank
     def initialize
-      @sym = :AAIB
-      @uri = URI.parse('http://aaib.com/services/rates')
+      @sym = :AlexBank
+      @uri = URI.parse('https://www.alexbank.com/En/Home/ExchangeRates')
     end
 
     # @return [Hash] of exchange rates for selling and buying
@@ -20,32 +20,17 @@ module EGPRates
 
     # Send the request to the URL and retrun raw data of the response
     # @return [Enumerator::Lazy] with the table row in HTML that evaluates to
-    #   [
-    #     [
-    #       "\r\n ",
-    #       "US DOLLAR"
-    #       "\r\n "
-    #       "15.9"
-    #       "\r\n "
-    #       "16.05"
-    #       "\r\n"
-    #     ], [
-    #       "\r\n "
-    #       "EURO CURRENCY"
-    #       "\r\n "
-    #       "17.2213"
-    #       "\r\n "
-    #       "17.5314"
-    #       "\r\n "
-    #     ], [
-    #       ...
-    #     ]
+    #   ["", "US Dollar", "", ..., "17.10000", "", "17.50000", ""]
+    #   ["", "British Pound", "", ..., "21.12363", "", "21.60025", ""]
+    #   ...
+    #
     def raw_exchange_rates
-      raw = response.body&.gsub("\u0000", '')
-      # AAIB provide 7 currencies only
-      table_rows = Oga.parse_html(raw).css('#rates-table tr')
-      fail ResponseError, 'Unknown HTML' unless table_rows&.size == 7
-      table_rows.lazy.map(&:children).map { |cell| cell.map(&:text) }
+      # AlexBank provide 17 currencies (and 1 <th>)
+      table_rows = Oga.parse_html(response.body).css('.exchangerate-table tr')
+      fail ResponseError, 'Unknown HTML' unless table_rows&.size == 18
+      table_rows.lazy.drop(1).map(&:children).map do |cell|
+        cell.map(&:text).map(&:strip)
+      end
     end
 
     # Parse the #raw_exchange_rates returned in response
@@ -57,8 +42,8 @@ module EGPRates
     #   }
     def parse(raw_data)
       raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
-        sell_rate = row[5].to_f
-        buy_rate  = row[3].to_f
+        sell_rate = row[9].to_f
+        buy_rate  = row[7].to_f
         currency  = currency_symbol(row[1])
 
         result[:sell][currency] = sell_rate
