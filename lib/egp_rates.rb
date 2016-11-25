@@ -21,6 +21,7 @@ require 'egp_rates/alex_bank'
 require 'egp_rates/blom'
 require 'egp_rates/adib'
 require 'egp_rates/egb'
+require 'egp_rates/nbg'
 
 # Base Module
 module EGPRates
