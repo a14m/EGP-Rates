@@ -1,10 +1,11 @@
-# v0.4.0
+# v1.0.0
 - Support Export Development Bank of Egypt (EDBE)
 - Support Bank of Alexandria (AlexBank)
 - Support Blom Bank Egypt (Blom)
 - Support Abu Dhabi Islamic Bank (ADIB)
 - Support Egyptian Gulf Bank (EGB)
 - Support National Bank of Greece (NBG)
+- Support Faisal Islamic Bank
 - Add API methods to easily interact with the gem.
 - Fix BanqueMisr swapping CHF and SEK exchange rates
 
