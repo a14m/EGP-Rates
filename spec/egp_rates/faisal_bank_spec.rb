@@ -1,0 +1,86 @@
+# frozen_string_literal: true
+describe EGPRates::FaisalBank do
+  subject(:bank) { described_class.new }
+
+  it 'Live Testing', :live do
+    expect(bank.exchange_rates).to include(:buy, :sell)
+    expect(bank.exchange_rates[:buy].size).to eq 13
+    expect(bank.exchange_rates[:sell].size).to eq 13
+  end
+
+  describe '.new' do
+    it 'initialize instance variables' do
+      expect(bank.sym).to eq :FaisalBank
+      expect(bank.instance_variable_get(:@uri)).to be_a URI
+    end
+  end
+
+  describe '#exchange_rates' do
+    it 'calls #parse with #raw_exchange_rates' do
+      expect(bank).to receive(:raw_exchange_rates)
+      expect(bank).to receive(:parse)
+      bank.exchange_rates
+    end
+  end
+
+  describe '#raw_exchange_rates' do
+    it 'raises ResponseError unless Net::HTTPSuccess', :no_vcr do
+      stub_request(:get, /.*faisalbank.*/).to_return(body: '', status: 500)
+      expect { bank.send(:raw_exchange_rates) }.to raise_error\
+        EGPRates::ResponseError, '500'
+    end
+
+    it 'raises ResponseError if HTML structure changed', :no_vcr do
+      stub_request(:get, /.*faisalbank.*/).to_return(body: '', status: 200)
+      expect { bank.send(:raw_exchange_rates) }.to raise_error\
+        EGPRates::ResponseError, 'Unknown HTML'
+    end
+
+    it 'returns <#Enumerator::Lazy> of 9 rows',
+       vcr: { cassette_name: :FaisalBank } do
+      lazy_enumerator = bank.send(:raw_exchange_rates)
+      expect(lazy_enumerator).to be_a Enumerator::Lazy
+      expect(lazy_enumerator.size).to eq 13
+    end
+  end
+
+  describe '#parse', vcr: { cassette_name: :FaisalBank } do
+    let(:raw_data) { bank.send(:raw_exchange_rates) }
+
+    it 'returns sell: hash of selling prices' do
+      expect(bank.send(:parse, raw_data)[:sell]).to match(
+        AED: 4.8326,
+        CAD: 13.1686,
+        CHF: 17.467,
+        DKK: 2.5187,
+        EUR: 18.7511,
+        GBP: 22.1005,
+        JPY: 0.157918,
+        KWD: 58.2158,
+        NOK: 2.0619,
+        QTR: 4.8748,
+        SAR: 4.7849,
+        SEK: 1.9133,
+        USD: 17.75
+      )
+    end
+
+    it 'returns buy: hash of buying prices' do
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
+        AED: 4.6964,
+        CAD: 12.7579,
+        CHF: 16.9267,
+        DKK: 2.4406,
+        EUR: 18.1556,
+        GBP: 21.4245,
+        JPY: 0.152817,
+        KWD: 56.5388,
+        NOK: 1.9973,
+        QTR: 4.7374,
+        SAR: 4.5745,
+        SEK: 1.8545,
+        USD: 17.25
+      )
+    end
+  end
+end
