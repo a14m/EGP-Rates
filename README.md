@@ -20,6 +20,7 @@ $ gem install EGP_Rates
 ```
 
 ## Usage
+- [Get all the available banks rates](/lib/egp_rates.rb)
 - [Central Bank of Egypt (CBE)](/lib/egp_rates/cbe.rb)
 - [National Bank of Egypt (NBE)](/lib/egp_rates/nbe.rb)
 - [Commercial International Bank (CIB)](/lib/egp_rates/cib.rb)
@@ -42,6 +43,17 @@ $ gem install EGP_Rates
 
 ```rb
 require 'EGP_Rates'
+# All Available Banks Data (Threaded execution)
+# For all the currencies that the currently showing on their pages
+EGPRates.exchange_rates
+
+# All Available Banks Data about specific currency
+# (by default it caches the response for later use)
+EGPRates.exchange_rate :USD        # call and cache response
+EGPRates.exchange_rate :eur        # from cached response
+EGPRates.exchange_rate :EUR, false # refresh cache
+
+# Specific Bank Data
 EGPRates::CBE.new.exchange_rates
 EGPRates::NBE.new.exchange_rates
 EGPRates::CIB.new.exchange_rates

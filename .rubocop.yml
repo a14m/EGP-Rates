@@ -24,3 +24,6 @@ RSpec/SubjectStub:
 
 RSpec/ExampleLength:
   Max: 20
+
+RSpec/NestedGroups:
+  MaxNesting: 3
