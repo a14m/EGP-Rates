@@ -25,13 +25,13 @@ describe EGPRates::AlAhliBankOfKuwait do
 
   describe '#raw_exchange_rates' do
     it 'raises ResponseError unless Net::HTTPSuccess', :no_vcr do
-      stub_request(:get, /.*piraeusbank.*/).to_return(body: '', status: 500)
+      stub_request(:get, /.*abkegypt.*/).to_return(body: '', status: 500)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
         EGPRates::ResponseError, '500'
     end
 
     it 'raises ResponseError if HTML structure changed', :no_vcr do
-      stub_request(:get, /.*piraeusbank.*/).to_return(body: '', status: 200)
+      stub_request(:get, /.*abkegypt.*/).to_return(body: '', status: 200)
       expect { bank.send(:raw_exchange_rates) }.to raise_error\
         EGPRates::ResponseError, 'Unknown HTML'
     end
@@ -49,27 +49,27 @@ describe EGPRates::AlAhliBankOfKuwait do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.5063,
-        CHF: 16.3959,
-        EUR: 17.5281,
-        GBP: 20.4359,
-        JPY: 0.1492,
-        KWD: 54.3746,
-        SAR: 4.4138,
-        USD: 16.55
+        AED: 4.9687,
+        CHF: 18.0016,
+        EUR: 19.3979,
+        GBP: 22.891,
+        JPY: 0.1603,
+        KWD: 59.8361,
+        SAR: 4.8664,
+        USD: 18.25
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.3965,
-        CHF: 15.9838,
-        EUR: 17.0948,
-        GBP: 19.9339,
-        JPY: 0.1455,
-        KWD: 53.0604,
-        SAR: 4.3071,
-        USD: 16.15
+        AED: 4.8326,
+        CHF: 17.4259,
+        EUR: 18.7902,
+        GBP: 22.1875,
+        JPY: 0.1546,
+        KWD: 58.1776,
+        SAR: 4.7323,
+        USD: 17.75
       )
     end
   end
