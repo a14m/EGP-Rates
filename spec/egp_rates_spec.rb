@@ -71,11 +71,11 @@ describe EGPRates do
         expect(exchange_rate).to match(NBE: { sell: 16.05, buy: 15.9 })
       end
 
-      it 'returns [Hash] of Bank: { sell: "Not Available" ... }',
+      it 'returns [Hash] of Bank: { sell: "N/A" ... }',
          vcr: { cassette_name: :NBE } do
         exchange_rate = described_class.exchange_rate(:SYM)
         expect(exchange_rate).to match(
-          NBE: { sell: 'Not Available', buy: 'Not Available' }
+          NBE: { sell: 'N/A', buy: 'N/A' }
         )
       end
     end

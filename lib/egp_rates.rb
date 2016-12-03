@@ -75,8 +75,8 @@ module EGPRates
     @exchange_rates.each_with_object({}) do |rates, result|
       begin
         result[rates[0]] = {
-          sell: rates[1][:sell].fetch(sym.upcase, 'Not Available'),
-          buy:  rates[1][:buy].fetch(sym.upcase,  'Not Available')
+          sell: rates[1][:sell].fetch(sym.upcase, 'N/A'),
+          buy:  rates[1][:buy].fetch(sym.upcase,  'N/A')
         }
       rescue TypeError
         result[rates[0]] = rates[1]
