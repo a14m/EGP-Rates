@@ -1,3 +1,7 @@
+# v1.0.1
+- Change the text when Currency "Not Available" to "N/A"
+- Update README adding a link to the CLI
+
 # v1.0.0
 - Support Export Development Bank of Egypt (EDBE)
 - Support Bank of Alexandria (AlexBank)

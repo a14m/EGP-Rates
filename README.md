@@ -4,6 +4,8 @@
 [![Test Coverage](https://codeclimate.com/github/mad-raz/EGP-Rates/badges/coverage.svg)](https://codeclimate.com/github/mad-raz/EGP-Rates/coverage)
 [![LICENSE](https://img.shields.io/badge/licence-MIT-blue.svg)](/LICENSE.md)
 
+[CLI available here](https://github.com/mad-raz/EGP-Rates-CLI)
+
 ## Installation
 
 Add this line to your application's Gemfile:
