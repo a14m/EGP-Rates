@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 module EGPRates
-  # Central Bank of Egypt
+  # Al Ahli Bank Of Kuwait
   class AlAhliBankOfKuwait < EGPRates::Bank
     def initialize
       @sym = :AlAhliBankOfKuwait
-      @uri = URI.parse('http://www.piraeusbank.com.eg/rates_abk.aspx')
+      @uri = URI.parse('http://www.abkegypt.com/rates_abk.aspx')
     end
 
     # @return [Hash] of exchange rates for selling and buying

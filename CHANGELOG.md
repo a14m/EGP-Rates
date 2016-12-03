@@ -1,3 +1,6 @@
+# v1.0.2
+- Fix AlAhliBankofKuwait to scrape their new website
+
 # v1.0.1
 - Change the text when Currency "Not Available" to "N/A"
 - Update README adding a link to the CLI
