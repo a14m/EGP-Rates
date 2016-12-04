@@ -49,26 +49,26 @@ describe EGPRates::AlAhliBankOfKuwait do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.9687,
-        CHF: 18.0016,
-        EUR: 19.3979,
-        GBP: 22.891,
-        JPY: 0.1603,
-        KWD: 59.8361,
-        SAR: 4.8664,
-        USD: 18.25
+        AED: 4.9149,
+        CHF: 17.8536,
+        EUR: 19.2666,
+        GBP: 22.9957,
+        JPY: 0.159,
+        KWD: 59.2192,
+        SAR: 4.8127,
+        USD: 18.05
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.8326,
-        CHF: 17.4259,
-        EUR: 18.7902,
-        GBP: 22.1875,
-        JPY: 0.1546,
-        KWD: 58.1776,
-        SAR: 4.7323,
+        CHF: 17.5395,
+        EUR: 18.9375,
+        GBP: 22.5958,
+        JPY: 0.1562,
+        KWD: 58.2349,
+        SAR: 4.7327,
         USD: 17.75
       )
     end
