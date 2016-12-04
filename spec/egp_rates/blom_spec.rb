@@ -49,39 +49,39 @@ describe EGPRates::Blom do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.8324,
+        AED: 4.9006,
         BHD: 0.0,
-        CAD: 13.155,
-        CHF: 17.6424,
-        DKK: 2.5391,
-        EUR: 18.8896,
-        GBP: 22.0739,
-        JPY: 16.1643,
-        KWD: 58.3498,
-        NOK: 2.0786,
+        CAD: 13.5788,
+        CHF: 17.8625,
+        DKK: 2.5862,
+        EUR: 19.2402,
+        GBP: 22.9266,
+        JPY: 15.88,
+        KWD: 59.0164,
+        NOK: 2.143,
         QAR: 0.0,
-        SAR: 4.7326,
-        SEK: 1.9238,
-        USD: 17.75
+        SAR: 4.7992,
+        SEK: 1.9644,
+        USD: 18.0
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.6284,
+        AED: 4.7781,
         BHD: 0.0,
-        CAD: 12.5332,
-        CHF: 16.7918,
-        DKK: 2.4152,
-        EUR: 17.969,
-        GBP: 20.9151,
-        JPY: 15.3236,
-        KWD: 55.8292,
-        NOK: 1.9747,
+        CAD: 13.1757,
+        CHF: 17.3385,
+        DKK: 2.5066,
+        EUR: 18.6486,
+        GBP: 22.0621,
+        JPY: 15.3664,
+        KWD: 57.541,
+        NOK: 2.0741,
         QAR: 0.0,
-        SAR: 4.5322,
-        SEK: 1.8314,
-        USD: 17.0
+        SAR: 4.6788,
+        SEK: 1.9022,
+        USD: 17.55
       )
     end
   end

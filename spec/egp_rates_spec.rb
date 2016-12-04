@@ -68,7 +68,7 @@ describe EGPRates do
       it 'returns [Hash] of Bank: { sell: rate, buy: rate }',
          vcr: { cassette_name: :NBE } do
         exchange_rate = described_class.exchange_rate(:USD)
-        expect(exchange_rate).to match(NBE: { sell: 16.05, buy: 15.9 })
+        expect(exchange_rate).to match(NBE: { sell: 17.75, buy: 17.5 })
       end
 
       it 'returns [Hash] of Bank: { sell: "N/A" ... }',

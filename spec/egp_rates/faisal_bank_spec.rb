@@ -49,37 +49,37 @@ describe EGPRates::FaisalBank do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.8326,
-        CAD: 13.1686,
-        CHF: 17.467,
-        DKK: 2.5187,
-        EUR: 18.7511,
-        GBP: 22.1005,
-        JPY: 0.157918,
-        KWD: 58.2158,
-        NOK: 2.0619,
-        QTR: 4.8748,
-        SAR: 4.7849,
-        SEK: 1.9133,
-        USD: 17.75
+        AED: 4.9006,
+        CAD: 13.5788,
+        CHF: 17.8625,
+        DKK: 2.5844,
+        EUR: 19.224,
+        GBP: 22.932,
+        JPY: 0.1588,
+        KWD: 59.0551,
+        NOK: 2.1428,
+        QAR: 4.9426,
+        SAR: 4.825,
+        SEK: 1.9604,
+        USD: 18.0
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.6964,
-        CAD: 12.7579,
-        CHF: 16.9267,
-        DKK: 2.4406,
-        EUR: 18.1556,
-        GBP: 21.4245,
-        JPY: 0.152817,
-        KWD: 56.5388,
-        NOK: 1.9973,
-        QTR: 4.7374,
-        SAR: 4.5745,
-        SEK: 1.8545,
-        USD: 17.25
+        AED: 4.7646,
+        CAD: 13.1421,
+        CHF: 17.2942,
+        DKK: 2.4995,
+        EUR: 18.5955,
+        GBP: 22.0833,
+        JPY: 0.15324,
+        KWD: 57.377,
+        NOK: 2.0682,
+        QAR: 4.806,
+        SAR: 4.6407,
+        SEK: 1.8972,
+        USD: 17.5
       )
     end
   end

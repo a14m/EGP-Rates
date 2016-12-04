@@ -63,25 +63,25 @@ describe EGPRates::AAIB do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.3697,
-        CHF: 16.3259,
-        EUR: 17.5314,
-        GBP: 20.3402,
-        KWD: 53.2869,
-        SAR: 4.2797,
-        USD: 16.05
+        AED: 4.8788,
+        CHF: 17.7831,
+        EUR: 19.1547,
+        GBP: 22.8247,
+        KWD: 59.4954,
+        SAR: 4.7783,
+        USD: 17.92
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.3043,
-        CHF: 16.0687,
-        EUR: 17.2213,
-        GBP: 19.9609,
-        KWD: 52.2056,
-        SAR: 4.2157,
-        USD: 15.9
+        AED: 4.778,
+        CHF: 17.4373,
+        EUR: 18.7549,
+        GBP: 22.1878,
+        KWD: 57.9515,
+        SAR: 4.6797,
+        USD: 17.65
       )
     end
   end
