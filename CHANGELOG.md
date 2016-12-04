@@ -1,3 +1,6 @@
+# v1.0.4
+- Add missing require to avoid class resolving URI name issue
+
 # v1.0.3
 - Replace yml cassettes with gz to make gem size smaller
 

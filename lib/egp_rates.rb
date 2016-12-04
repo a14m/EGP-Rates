@@ -2,6 +2,7 @@
 
 require 'oga'
 require 'json'
+require 'uri'
 require 'thread'
 require 'egp_rates/bank'
 require 'egp_rates/cbe'
