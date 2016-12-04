@@ -64,25 +64,25 @@ describe EGPRates::AlBarakaBank do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        BHD: 44.1132,
-        CHF: 16.6453,
-        EUR: 17.8711,
-        GBP: 20.7983,
-        JPY: 15.3206,
-        SAR: 4.4326,
-        USD: 16.500
+        BHD: 48.3615,
+        CHF: 18.4535,
+        EUR: 19.4932,
+        GBP: 23.2589,
+        JPY: 16.0489,
+        SAR: 4.8618,
+        USD: 18.09
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        BHD: 41.7382,
-        CHF: 15.6272,
-        EUR: 16.7232,
-        GBP: 19.5306,
-        JPY: 14.3099,
-        SAR: 4.1259,
-        USD: 15.960
+        BHD: 46.3908,
+        CHF: 17.2842,
+        EUR: 18.6618,
+        GBP: 22.2669,
+        JPY: 15.3949,
+        SAR: 4.588,
+        USD: 17.74
       )
     end
   end

@@ -74,45 +74,45 @@ describe EGPRates::BanqueMisr do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.3294,
-        AUD: 12.1317,
-        BHD: 42.1928,
-        CAD: 11.8178,
-        CHF: 16.1754,
-        DKK: 2.334,
-        EUR: 17.3698,
-        GBP: 20.1527,
-        JOD: 22.4478,
-        JPY: 14.9963,
-        KWD: 52.534,
-        NOK: 1.9046,
-        OMR: 41.3147,
-        QAR: 4.3677,
-        SAR: 4.24,
-        SEK: 1.7622,
-        USD: 15.91
+        AED: 4.8303,
+        AUD: 13.2491,
+        BHD: 47.0624,
+        CAD: 13.3835,
+        CHF: 17.6056,
+        DKK: 2.549,
+        EUR: 18.9635,
+        GBP: 22.5969,
+        JOD: 25.0439,
+        JPY: 15.6516,
+        KWD: 58.1962,
+        NOK: 2.1122,
+        OMR: 46.1276,
+        QAR: 4.8723,
+        SAR: 4.7303,
+        SEK: 1.9322,
+        USD: 17.75
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.179,
-        AUD: 11.5524,
-        BHD: 40.6957,
-        CAD: 11.3309,
-        CHF: 15.5129,
-        DKK: 2.2338,
-        EUR: 16.6256,
-        GBP: 19.2289,
-        JOD: 21.6594,
-        JPY: 14.3552,
-        KWD: 50.5599,
-        NOK: 1.819,
-        OMR: 39.8339,
-        QAR: 4.2154,
-        SAR: 4.0927,
-        SEK: 1.6843,
-        USD: 15.35
+        AED: 4.7645,
+        AUD: 12.9535,
+        BHD: 46.4166,
+        CAD: 13.1381,
+        CHF: 17.2891,
+        DKK: 2.4995,
+        EUR: 18.5955,
+        GBP: 21.9993,
+        JOD: 24.6827,
+        JPY: 15.3227,
+        KWD: 57.377,
+        NOK: 2.0682,
+        OMR: 45.4133,
+        QAR: 4.8053,
+        SAR: 4.6654,
+        SEK: 1.8968,
+        USD: 17.5
       )
     end
   end

@@ -54,21 +54,21 @@ describe EGPRates::ADIB do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.8055,
-        EUR: 18.7496,
-        GBP: 22.1772,
-        SAR: 4.706,
-        USD: 17.65
-      )
-    end
-
-    it 'returns buy: hash of buying prices' do
-      expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.928,
         EUR: 19.3471,
         GBP: 23.054,
         SAR: 4.8269,
         USD: 18.1
+      )
+    end
+
+    it 'returns buy: hash of buying prices' do
+      expect(bank.send(:parse, raw_data)[:buy]).to match(
+        AED: 4.8055,
+        EUR: 18.7496,
+        GBP: 22.1772,
+        SAR: 4.706,
+        USD: 17.65
       )
     end
   end

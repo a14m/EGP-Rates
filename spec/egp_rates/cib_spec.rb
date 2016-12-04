@@ -69,23 +69,23 @@ describe EGPRates::CIB do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        CHF: 16.3176,
-        EUR: 17.5234,
-        GBP: 20.292,
-        KWD: 53.0018,
-        SAR: 4.281,
-        USD: 16.05
+        CHF: 17.6266,
+        EUR: 18.973,
+        GBP: 22.6082,
+        KWD: 58.2254,
+        SAR: 4.7331,
+        USD: 17.75
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        CHF: 16.0433,
-        EUR: 17.1904,
-        GBP: 19.9359,
-        KWD: 52.2074,
-        SAR: 4.2327,
-        USD: 15.9
+        CHF: 17.2891,
+        EUR: 18.5903,
+        GBP: 21.9888,
+        KWD: 57.3667,
+        SAR: 4.659,
+        USD: 17.5
       )
     end
   end

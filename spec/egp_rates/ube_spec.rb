@@ -48,23 +48,23 @@ describe EGPRates::UBE do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.778,
-        EUR: 18.6644,
-        GBP: 21.662,
-        KWD: 57.5599,
-        SAR: 4.6798,
-        USD: 17.55
+        AED: 4.8734,
+        EUR: 19.1333,
+        GBP: 22.7992,
+        KWD: 58.7174,
+        SAR: 4.7731,
+        USD: 17.9
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.7046,
-        EUR: 18.265,
-        GBP: 21.346,
-        KWD: 56.6929,
-        SAR: 4.5836,
-        USD: 17.28
+        AED: 4.8191,
+        EUR: 18.808,
+        GBP: 22.2507,
+        KWD: 58.0804,
+        SAR: 4.695,
+        USD: 17.7
       )
     end
   end

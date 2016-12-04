@@ -48,21 +48,21 @@ describe EGPRates::EDBE do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        CHF: 17.6032,
-        EUR: 18.8363,
-        GBP: 22.0117,
-        JPY: 16.1261,
-        USD: 17.7
+        CHF: 17.8749,
+        EUR: 19.2402,
+        GBP: 22.9266,
+        JPY: 15.8884,
+        USD: 18.0
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        CHF: 17.0387,
-        EUR: 18.2281,
-        GBP: 21.2123,
-        JPY: 15.5489,
-        USD: 17.25
+        CHF: 17.5064,
+        EUR: 18.824,
+        GBP: 22.2652,
+        JPY: 15.5153,
+        USD: 17.72
       )
     end
   end

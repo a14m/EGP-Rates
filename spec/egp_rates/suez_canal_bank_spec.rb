@@ -68,16 +68,16 @@ describe EGPRates::SuezCanalBank do
         AED: 0.0,
         AUD: 0.0,
         CAD: 0.0,
-        CHF: 16.1144,
+        CHF: 17.8749,
         DKK: 0.0,
-        EUR: 17.3056,
-        GBP: 20.0448,
+        EUR: 19.2402,
+        GBP: 22.9266,
         JPY: 0.0,
         KWD: 0.0,
         NOK: 0.0,
-        SAR: 4.2664,
+        SAR: 4.8003,
         SEK: 0.0,
-        USD: 15.8
+        USD: 18.0
       )
     end
 
@@ -86,16 +86,16 @@ describe EGPRates::SuezCanalBank do
         AED: 0.0,
         AUD: 0.0,
         CAD: 0.0,
-        CHF: 14.9665,
+        CHF: 17.3879,
         DKK: 0.0,
-        EUR: 16.0503,
-        GBP: 18.5933,
+        EUR: 18.6965,
+        GBP: 22.1144,
         JPY: 0.0,
         KWD: 0.0,
         NOK: 0.0,
-        SAR: 3.9856,
+        SAR: 4.6714,
         SEK: 0.0,
-        USD: 15.15
+        USD: 17.6
       )
     end
   end

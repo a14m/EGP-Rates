@@ -71,7 +71,7 @@ describe EGPRates::CBE do
         JPY: 15.8992,
         KWD: 59.2257,
         SAR: 4.8132,
-        USD: 18.052,
+        USD: 18.052
       )
     end
 

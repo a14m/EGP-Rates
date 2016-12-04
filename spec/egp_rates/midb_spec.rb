@@ -48,25 +48,25 @@ describe EGPRates::MIDB do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.7835,
-        CHF: 17.4063,
-        EUR: 18.5978,
-        GBP: 21.6866,
-        JPY: 15.8416,
-        SAR: 4.6847,
-        USD: 17.5
+        AED: 4.934,
+        CHF: 17.925,
+        EUR: 19.3346,
+        GBP: 23.0696,
+        JPY: 15.9611,
+        SAR: 4.8322,
+        USD: 18.05
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.5491,
-        CHF: 16.8574,
-        EUR: 18.0113,
-        GBP: 21.0027,
-        JPY: 15.342,
-        SAR: 4.4551,
-        USD: 17.05
+        AED: 4.7094,
+        CHF: 17.423,
+        EUR: 18.7931,
+        GBP: 22.4235,
+        JPY: 15.5141,
+        SAR: 4.6122,
+        USD: 17.65
       )
     end
   end

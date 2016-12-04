@@ -67,45 +67,45 @@ describe EGPRates::AlexBank do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.7695,
-        AUD: 12.9845,
+        AED: 4.91437,
+        AUD: 13.47974,
         BHD: 0.0,
-        CAD: 12.97269,
-        CHF: 17.3969,
-        DKK: 2.50636,
-        EUR: 18.6235,
-        GBP: 21.60025,
+        CAD: 13.61648,
+        CHF: 17.91208,
+        DKK: 2.59343,
+        EUR: 19.29365,
+        GBP: 22.97765,
         JOD: 0.0,
-        JPY: 15.77035,
-        KWD: 57.6647,
-        NOK: 2.05232,
+        JPY: 15.92413,
+        KWD: 59.21916,
+        NOK: 2.14896,
         OMR: 0.0,
         QAR: 0.0,
-        SAR: 4.6708,
-        SEK: 1.89671,
-        USD: 17.5
+        SAR: 4.81269,
+        SEK: 1.9658,
+        USD: 18.05
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.63547,
-        AUD: 12.53601,
+        AED: 4.77717,
+        AUD: 13.04232,
         BHD: 0.0,
-        CAD: 12.6069,
-        CHF: 16.89056,
-        DKK: 2.42936,
-        EUR: 18.0747,
-        GBP: 21.12363,
+        CAD: 13.22823,
+        CHF: 17.40763,
+        DKK: 2.5166,
+        EUR: 18.72301,
+        GBP: 22.44788,
         JOD: 0.0,
-        JPY: 15.41791,
-        KWD: 55.58396,
-        NOK: 1.98636,
+        JPY: 15.42772,
+        KWD: 57.29892,
+        NOK: 2.08237,
         OMR: 0.0,
         QAR: 0.0,
-        SAR: 4.54476,
-        SEK: 1.84222,
-        USD: 17.1
+        SAR: 4.68342,
+        SEK: 1.90982,
+        USD: 17.62
       )
     end
   end
