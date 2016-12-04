@@ -1,3 +1,6 @@
+# v1.0.3
+- Replace yml cassettes with gz to make gem size smaller
+
 # v1.0.2
 - Fix AlAhliBankofKuwait to scrape their new website
 
