@@ -63,29 +63,29 @@ describe EGPRates::CBE do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.6524,
-        CHF: 17.3096,
-        CNY: 2.5138,
-        EUR: 18.6155,
-        GBP: 21.2365,
-        JPY: 16.0014,
-        KWD: 56.3718,
-        SAR: 4.5562,
-        USD: 17.0863
+        AED: 4.9155,
+        CHF: 17.8556,
+        CNY: 2.6227,
+        EUR: 19.2687,
+        GBP: 22.9982,
+        JPY: 15.8992,
+        KWD: 59.2257,
+        SAR: 4.8132,
+        USD: 18.052,
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.4518,
-        CHF: 16.551,
-        CNY: 2.4052,
-        EUR: 17.8111,
-        GBP: 20.3231,
-        JPY: 15.3113,
-        KWD: 53.8492,
-        SAR: 4.3603,
-        USD: 16.354
+        AED: 4.7994,
+        CHF: 17.4193,
+        CNY: 2.5585,
+        EUR: 18.8076,
+        GBP: 22.4408,
+        JPY: 15.5151,
+        KWD: 57.7977,
+        SAR: 4.7001,
+        USD: 17.6283
       )
     end
   end
