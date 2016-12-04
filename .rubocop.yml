@@ -16,6 +16,9 @@ LiteralInInterpolation:
 Style/SignalException:
   Enabled: false
 
+Style/AsciiComments:
+  Enabled: false
+
 RSpec/MultipleExpectations:
   Max: 5
 
