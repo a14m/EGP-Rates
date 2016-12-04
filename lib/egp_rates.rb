@@ -3,6 +3,7 @@
 require 'oga'
 require 'json'
 require 'uri'
+require 'net/http'
 require 'thread'
 require 'egp_rates/bank'
 require 'egp_rates/cbe'

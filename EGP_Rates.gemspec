@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'EGP_Rates'
-  spec.version       = '1.0.4'
+  spec.version       = '1.0.5'
   spec.authors       = ['Ahmed Abdel-Razzak']
   spec.email         = ['abdelrazzak.ahmed@gmail.com']
 
@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'codeclimate-test-reporter'
 
-  spec.add_dependency 'oga'
+  spec.add_dependency 'oga', '~>2.7'
 end

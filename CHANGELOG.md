@@ -1,13 +1,8 @@
-# v1.0.4
+# v1.0.5
+- Add missing require to avoid class resolving Net::HTTP name issue
 - Add missing require to avoid class resolving URI name issue
-
-# v1.0.3
 - Replace yml cassettes with gz to make gem size smaller
-
-# v1.0.2
 - Fix AlAhliBankofKuwait to scrape their new website
-
-# v1.0.1
 - Change the text when Currency "Not Available" to "N/A"
 - Update README adding a link to the CLI
 
