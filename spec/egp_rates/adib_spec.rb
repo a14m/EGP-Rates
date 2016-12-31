@@ -44,7 +44,7 @@ describe EGPRates::ADIB do
 
     it 'returns <#Enumerator::Lazy> of 5 rows', vcr: { cassette_name: :ADIB } do
       lazy_enumerator = bank.send(:raw_exchange_rates)
-      expect(lazy_enumerator).to be_a Enumerator::Lazy
+      expect(lazy_enumerator).to be_a Array
       expect(lazy_enumerator.size).to eq 5
     end
   end
@@ -54,21 +54,21 @@ describe EGPRates::ADIB do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.928,
-        EUR: 19.3471,
-        GBP: 23.054,
-        SAR: 4.8269,
-        USD: 18.1
+        AED: 5.132,
+        EUR: 19.7548,
+        GBP: 23.1365,
+        SAR: 5.0264,
+        USD: 18.85
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.8055,
-        EUR: 18.7496,
-        GBP: 22.1772,
-        SAR: 4.706,
-        USD: 17.65
+        AED: 4.9279,
+        EUR: 18.8403,
+        GBP: 22.1019,
+        SAR: 4.8042,
+        USD: 18.1
       )
     end
   end
