@@ -45,7 +45,7 @@ $ gem install EGP_Rates
 - [Faisal Islamic Bank](/lib/egp_rates/faisal_bank.rb)
 
 ```rb
-require 'EGP_Rates'
+require 'egp_rates'
 # All Available Banks Data (Threaded execution)
 # For all the currencies that the currently showing on their pages
 EGPRates.exchange_rates
