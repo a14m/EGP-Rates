@@ -8,4 +8,12 @@ RuboCop::RakeTask.new do |task|
   task.requires << 'rubocop-rspec'
 end
 
+RSpec::Core::RakeTask.new(:spec_local) do |t|
+  t.rspec_opts = '--tag ~live'
+end
+
+RSpec::Core::RakeTask.new(:spec_live) do |t|
+  t.rspec_opts = '--tag live'
+end
+
 task default: :spec
