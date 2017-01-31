@@ -5,14 +5,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'EGP_Rates'
-  spec.version       = '1.0.6'
+  spec.version       = '1.0.7'
   spec.authors       = ['Ahmed Abdel-Razzak']
   spec.email         = ['abdelrazzak.ahmed@gmail.com']
 
   spec.summary       = 'Scrape EGP exchange rate from different EG Banks'
   spec.homepage      = 'https://github.com/mad-raz/EGP-Rates'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '~>2.3.0'
+  spec.required_ruby_version = '~>2.3'
 
   spec.files         = Dir['lib/**/*.rb'] + Dir['spec/**/*']
   spec.require_paths = ['lib']
