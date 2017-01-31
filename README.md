@@ -82,7 +82,11 @@ EGPRates::FaisalBank.new.exchange_rates
 ## Development
 - clone the repo
 - to install dependencies run `bundle install`
-- to run the test suite `bundle exec rake spec`
+- to run the test suite `bundle exec rake spec` (local testing and live)
+- to run the live test suite `bundle exec rake spec_live`
+  (or `bundle exec rspec -t live`)
+- to run the local test suite `bundle exec rake spec_local`
+  (or `bundle exec rspec -t ~live`)
 - to run rubocop linter `bundle exec rake rubocop`
 
 ## Contributing
