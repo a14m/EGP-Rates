@@ -1,3 +1,18 @@
+# Not released yet
+- Ignore reporting bundled directory from coverage (locally)
+- Add documentation on how to run different tags in test suite
+- Add rake tasks to run different tags on test suite (live/local)
+- Fix LICENSE file to be picked up by github and shown in repo status
+- Fix wrong link in contribution guide
+- Update LICENCE year
+
+# v1.0.7
+- Allow development till ruby v.3
+- Fix documentation on require gem and run the test suite
+
+# v1.0.6
+- Fix ADIB page changes
+
 # v1.0.5
 - Add missing require to avoid class resolving Net::HTTP name issue
 - Add missing require to avoid class resolving URI name issue

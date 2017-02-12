@@ -1,6 +1,4 @@
-**[The MIT License (MIT)](http://opensource.org/licenses/MIT)**
-
-Copyright (c) 2016 [Mad-Raz](https://github.com/mad-raz)
+Copyright (c) 2017 [Mad-Raz](https://github.com/mad-raz)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

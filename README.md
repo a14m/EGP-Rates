@@ -92,7 +92,7 @@ EGPRates::FaisalBank.new.exchange_rates
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/mad-raz/EGP_Rates
+https://github.com/mad-raz/EGP-Rates
 
 This project is intended to be a safe,
 welcoming space for collaboration,
