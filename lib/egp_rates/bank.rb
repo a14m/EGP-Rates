@@ -38,7 +38,7 @@ module EGPRates
       when /Chinese/                  then :CNY
       when /Danish/i                  then :DKK
       when /Euro|EUR/i                then :EUR
-      when /British|Sterl\.|GBP/i     then :GBP
+      when /British|Sterl.|GBP/i      then :GBP
       when /Jordanian/i               then :JOD
       when /Japanese|JPY|YEN/i        then :JPY
       when /Kuwait/i                  then :KWD
