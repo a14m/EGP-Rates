@@ -4,7 +4,7 @@ module EGPRates
   class FaisalBank < EGPRates::Bank
     def initialize
       @sym = :FaisalBank
-      @uri = URI.parse('http://www.faisalbank.com.eg/FIB/arabic/rate.html')
+      @uri = URI.parse('https://online.faisalbank.com.eg/IB/.FIBUserServices/currencyXRate.do?op=getCurrencyExchangeRates&LangID=2')
     end
 
     # @return [Hash] of exchange rates for selling and buying
@@ -26,30 +26,10 @@ module EGPRates
     #     ...
     #   ]
     def raw_exchange_rates
-      table_rows = Oga.parse_html(response.body).css('.even')
-      # FaisalBank porvide 13 currencies
-      fail ResponseError, 'Unknown HTML' unless table_rows&.size == 13
-      table_rows.lazy.map(&:children).map do |cell|
-        cell.to_a.drop(2).map(&:text).map(&:strip)
-      end
-    end
-
-    # Parse the #raw_exchange_rates returned in response
-    # @param [Array] of the raw_data scraped
-    # @return [Hash] of exchange rates for selling and buying
-    #   {
-    #     { sell: { SYM: rate }, { SYM: rate }, ... },
-    #     { buy:  { SYM: rate }, { SYM: rate }, ... }
-    #   }
-    def parse(raw_data)
-      raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
-        sell_rate = row[5].to_f
-        buy_rate  = row[3].to_f
-        currency  = row[1].to_sym
-
-        result[:sell][currency] = sell_rate
-        result[:buy][currency]  = buy_rate
-      end
+      table_rows = Oga.parse_html(response.body).css('.Action-Table td')
+      # each  currency of the 13 provided in 5 table data
+      fail ResponseError, 'Unknown HTML' unless table_rows&.size == 13 * 5
+      table_rows.map(&:text).map(&:strip).each_slice(5)
     end
   end
 end
