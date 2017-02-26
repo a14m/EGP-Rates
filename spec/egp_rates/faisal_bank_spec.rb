@@ -36,11 +36,11 @@ describe EGPRates::FaisalBank do
         EGPRates::ResponseError, 'Unknown HTML'
     end
 
-    it 'returns <#Enumerator::Lazy> of 9 rows',
+    it 'returns <#Enumerator::Lazy> of 13 rows',
        vcr: { cassette_name: :FaisalBank } do
-      lazy_enumerator = bank.send(:raw_exchange_rates)
-      expect(lazy_enumerator).to be_a Enumerator::Lazy
-      expect(lazy_enumerator.size).to eq 13
+      enumerator = bank.send(:raw_exchange_rates)
+      expect(enumerator).to be_an Enumerator
+      expect(enumerator.size).to eq 13
     end
   end
 
@@ -49,37 +49,37 @@ describe EGPRates::FaisalBank do
 
     it 'returns sell: hash of selling prices' do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
-        AED: 4.9006,
-        CAD: 13.5788,
-        CHF: 17.8625,
-        DKK: 2.5844,
-        EUR: 19.224,
-        GBP: 22.932,
-        JPY: 0.1588,
-        KWD: 59.0551,
-        NOK: 2.1428,
-        QAR: 4.9426,
-        SAR: 4.825,
-        SEK: 1.9604,
-        USD: 18.0
+        AED: 4.2884,
+        CAD: 12.0616,
+        CHF: 15.7092,
+        DKK: 2.2495,
+        EUR: 16.7218,
+        GBP: 19.7899,
+        JPY: 0.140688,
+        KWD: 51.6902,
+        NOK: 1.8928,
+        QAR: 4.3251,
+        SAR: 4.2216,
+        SEK: 1.757,
+        USD: 15.75
       )
     end
 
     it 'returns buy: hash of buying prices' do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
-        AED: 4.7646,
-        CAD: 13.1421,
-        CHF: 17.2942,
-        DKK: 2.4995,
-        EUR: 18.5955,
-        GBP: 22.0833,
-        JPY: 0.15324,
-        KWD: 57.377,
-        NOK: 2.0682,
-        QAR: 4.806,
-        SAR: 4.6407,
-        SEK: 1.8972,
-        USD: 17.5
+        AED: 4.2611,
+        CAD: 11.932,
+        CHF: 15.5273,
+        DKK: 2.2224,
+        EUR: 16.5233,
+        GBP: 19.4796,
+        JPY: 0.139148,
+        KWD: 51.2409,
+        NOK: 1.8679,
+        QAR: 4.2983,
+        SAR: 4.151,
+        SEK: 1.7316,
+        USD: 15.65
       )
     end
   end

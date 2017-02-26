@@ -6,10 +6,10 @@ describe EGPRates do
       let(:bank) { double(EGPRates::Bank) }
 
       it 'calls #exchange_rates on all Bank Classes' do
-        expect(described_class).to receive(:const_get).exactly(20).times
+        expect(described_class).to receive(:const_get).exactly(19).times
           .and_return bank
-        expect(bank).to receive(:new).exactly(20).times.and_return bank
-        expect(bank).to receive(:exchange_rates).exactly(20).times
+        expect(bank).to receive(:new).exactly(19).times.and_return bank
+        expect(bank).to receive(:exchange_rates).exactly(19).times
 
         described_class.exchange_rates
       end

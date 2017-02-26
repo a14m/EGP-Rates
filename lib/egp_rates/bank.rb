@@ -33,21 +33,21 @@ module EGPRates
       when /UAE|EMIRATES|Dirham|AED/i then :AED
       when /Australian/i              then :AUD
       when /Bahrain|BHD/i             then :BHD
-      when /Canadian/i                then :CAD
+      when /Canadian|CANAD\. Dollar/i then :CAD
       when /Swiss|CHF/i               then :CHF
       when /Chinese/                  then :CNY
       when /Danish/i                  then :DKK
       when /Euro|EUR/i                then :EUR
-      when /British|Sterling|GBP/i    then :GBP
+      when /British|Sterl.|GBP/i      then :GBP
       when /Jordanian/i               then :JOD
       when /Japanese|JPY|YEN/i        then :JPY
       when /Kuwait/i                  then :KWD
-      when /Norwegian/i               then :NOK
+      when /Norwegian|NORWEG\./i      then :NOK
       when /Omani/i                   then :OMR
       when /Qatar/i                   then :QAR
       when /SAR|Saudi/i               then :SAR
       when /Swidish|Swedish/i         then :SEK
-      when /US Dollar|USD/i           then :USD
+      when /U(\.)?S(\.)? Dollar|USD/i then :USD
       else fail ResponseError, "Unknown currency #{currency}"
       end
     end
