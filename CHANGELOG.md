@@ -1,4 +1,8 @@
 # Not released yet
+
+# v1.1.0
+- Remove SAIB support (they provide the rates as image)
+
 - Ignore reporting bundled directory from coverage (locally)
 - Add documentation on how to run different tags in test suite
 - Add rake tasks to run different tags on test suite (live/local)
