@@ -15,6 +15,20 @@ describe EGPRates::AAIB do
     end
   end
 
+  describe '#response' do
+    it 'Follows redirects' do
+      stub_request(:get, /.*aaib.*/).to_return(
+        status: 301,
+        headers: {
+          Location: 'http://aaib.com/services/rates'
+        }
+      )
+      expect(Net::HTTP).to receive(:get_response).twice.and_call_original
+      expect { bank.send(:response) }.to raise_error \
+        EGPRates::ResponseError, '301'
+    end
+  end
+
   describe '#exchange_rates' do
     it 'calls #parse with #raw_exchange_rates' do
       expect(bank).to receive(:raw_exchange_rates)
