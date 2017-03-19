@@ -1,5 +1,8 @@
 # Not released yet
 
+# v1.1.1
+- Follow 301 redirect pages on banks
+
 # v1.1.0
 - Remove SAIB support (they provide the rates as image)
 
