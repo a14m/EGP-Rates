@@ -19,6 +19,9 @@ module EGPRates
     # @raises [ResponseError] if response is not 200 OK
     def response
       response = Net::HTTP.get_response(@uri)
+      if response.is_a? Net::HTTPRedirection
+        response = Net::HTTP.get_response(URI.parse(response['location']))
+      end
       fail ResponseError, response.code unless response.is_a? Net::HTTPSuccess
       response
     end
