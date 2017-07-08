@@ -61,7 +61,7 @@ describe EGPRates::NBE do
         KWD: 58.2254,
         NOK: 2.1132,
         OMR: 46.1506,
-        QTR: 4.8748,
+        QAR: 4.8748,
         SAR: 4.7327,
         SEK: 1.9331,
         USD: 17.75
@@ -83,7 +83,7 @@ describe EGPRates::NBE do
         KWD: 57.377,
         NOK: 2.0682,
         OMR: 45.4133,
-        QTR: 4.8053,
+        QAR: 4.8053,
         SAR: 4.6654,
         SEK: 1.8968,
         USD: 17.5
