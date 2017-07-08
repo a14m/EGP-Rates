@@ -50,7 +50,7 @@ describe EGPRates::NBE do
       expect(bank.send(:parse, raw_data)[:sell]).to match(
         AED: 4.8327,
         AUD: 13.2557,
-        BAD: 47.086,
+        BHD: 47.086,
         CAD: 13.3902,
         CHF: 17.6144,
         DKK: 2.5503,
@@ -72,7 +72,7 @@ describe EGPRates::NBE do
       expect(bank.send(:parse, raw_data)[:buy]).to match(
         AED: 4.7645,
         AUD: 12.9535,
-        BAD: 46.4166,
+        BHD: 46.4166,
         CAD: 13.1381,
         CHF: 17.2891,
         DKK: 2.4995,
