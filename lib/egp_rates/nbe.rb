@@ -60,7 +60,15 @@ module EGPRates
       raw_data.each_with_object(sell: {}, buy: {}) do |row, result|
         sell_rate = row[4].strip.to_f
         buy_rate  = row[3].strip.to_f
-        currency  = row[2].strip.to_sym
+        currency = row[2].strip.to_sym
+        # Bahraini Dinar is BHD not BAD
+        # Also Qatar Rial is QAR not QTR
+        # Changing them for consistency
+        if currency == :BAD
+          currency = :BHD
+        elsif currency == :QTR
+          currency = :QAR
+        end
 
         result[:sell][currency] = sell_rate
         result[:buy][currency]  = buy_rate
