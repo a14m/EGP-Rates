@@ -1,4 +1,6 @@
 # Not released yet
+# v1.1.2
+- Fix NBE to use ISO symbols for `BHD`, `QAR` [PR #27](https://github.com/mad-raz/EGP-Rates/pull/27)
 
 # v1.1.1
 - Follow 301 redirect pages on banks
