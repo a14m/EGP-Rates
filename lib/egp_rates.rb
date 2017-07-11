@@ -24,7 +24,6 @@ require 'egp_rates/blom'
 require 'egp_rates/adib'
 require 'egp_rates/egb'
 require 'egp_rates/nbg'
-require 'egp_rates/faisal_bank'
 
 # Base Module
 module EGPRates

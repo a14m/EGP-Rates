@@ -41,7 +41,6 @@ $ gem install EGP_Rates
 - [Abu Dhabi Islamic Bank (ADIB)](/lib/egp_rates/adib.rb)
 - [Egyptian Gulf Bank (EGB)](/lib/egp_rates/egb.rb)
 - [National Bank of Greece (NBG)](/lib/egp_rates/nbg.rb)
-- [Faisal Islamic Bank](/lib/egp_rates/faisal_bank.rb)
 
 ```rb
 require 'egp_rates'
@@ -74,7 +73,6 @@ EGPRates::Blom.new.exchange_rates
 EGPRates::ADIB.new.exchange_rates
 EGPRates::EGB.new.exchange_rates
 EGPRates::NBG.new.exchange_rates
-EGPRates::FaisalBank.new.exchange_rates
 ```
 
 ## Development
